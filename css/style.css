@@ -1,0 +1,51 @@
+body { 
+  background: repeating-linear-gradient( -45deg, #111 2px, #111111 3px, #0f0f0f 4px, #111 7px); 
+}
+.navcolor {
+  background: rgba(0, 0, 0, 0.7);
+}
+#picture {
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.transparentbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 28px;
+    -webkit-text-fill-color: #ffffff;
+    text-align: right;
+    list-style: none;
+    background-color:transparent; 
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: transparent;
+    border: transparent;   
+}
+
+.dropdown-item:hover {
+  -webkit-text-fill-color: black;
+}
+.nav-item:hover {
+  border-bottom:1px solid rgb(255, 255, 255);
+
+}
+.nav-item {
+  border-bottom:1px solid transparent;
+
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+
