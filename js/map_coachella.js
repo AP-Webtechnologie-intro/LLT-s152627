@@ -1,20 +1,14 @@
 
-let map = L.map('map').setView([51.23009, 4.41616], 13);
+let map = L.map('map').setView([33.683770319664966, -116.23863146267365], 13);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 17,
+    maxZoom: 14,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 // define rectangle geographical bounds
-let bounds = [[51.23041, 4.4155], [51.22991, 4.41675]];
-
-// create an orange rectangle
-L.rectangle(bounds, {color: "#ff7800", weight: 1}).addTo(map);
+let bounds = [[33.683770319664966, -116.23863146267365], [33.683770319664966, -116.23863146267365]];
 
 // zoom the map to the rectangle bounds
 map.fitBounds(bounds);
 
-
-
-
-L.marker([51.23009, 4.41616]).addTo(map);
+L.marker([33.683770319664966, -116.23863146267365]).addTo(map);
 

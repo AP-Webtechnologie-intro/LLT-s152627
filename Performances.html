@@ -1,70 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link class="" rel="icon" href="Inhoud\favicon.ico">
-<title>Home</title>
- <!-- Required meta tags -->
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-<!-- JavaScript: Bootstrap Bundle with Popper -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!-- own CSS -->
-<link rel="stylesheet" href="css/style.css">
+    <link class="" rel="icon" href="Inhoud\favicon.ico">
+    <title>Performances</title>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <!-- JavaScript: Bootstrap Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- own CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/nav.js" defer></script>
 </head>
-
-
 <body>
-    <div id="picture" style="background-image: url('Inhoud/fred_banner_1.jpg');">
-        <nav class="navbar navbar-expand-lg navcolor">
-            <a class="navbar-brand" href="index.html"><img src="Inhoud/logo.png" alt="logo.png" width="200px"></a>
-
-            <!-- Collapsible wrapper -->
-            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <div id="picture" class="border-bottom" style="background-image: url('Inhoud/fredagainandagain.jpg');">
+        <!-- Navigation bar using Bootstrap classes -->
+        <nav class="navbar navbar-expand-lg navcolor fixed-top ">
+            <!-- Brand/logo on the left side -->
+            <a class="navbar-brand" href="index.html"><img src="Inhoud/logo.png" alt="logo.png"></a>
+            <!-- Collapsible wrapper for responsive design -->
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse"
+                data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon fs-1"></span>
             </button>
-
-            <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo02">
-                <!-- center links -->
-                <ul class="navbar-nav mr-auto mx-4 mb-lg-0">
+            <!-- Collapsible content for navigation links -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
+                <!-- Centered navigation links -->
+                <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link active text-light fs-3" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link text-light fs-3" aria-current="page" href="index.html">Home</a>
                     </li>
-                    <!-- who's dropdown -->
+                    <li class="nav-item">
+                        <a class="nav-link text-light fs-3" href="summary.html">Summary</a>
+                    </li>
+                    <!-- Dropdown for "Who'sFred?" -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light fs-3" href="whofred.html" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Who'sFred?</a>
+                        <a class="nav-link dropdown-toggle text-light fs-3" href="whofred.html"
+                            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Who'sFred?</a>
                         <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li>
                                 <a class="dropdown-item text-light" href="whotony.html">Who'sTony?</a>
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light fs-3" href="listen.html">Listen</a>
-                    </li>
-                    <!-- Social dropdown -->
+                    <!-- Dropdown for "Performances" -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light fs-3" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Performances</a>
+                        <a class="nav-link dropdown-toggle text-light fs-3" href="Performances.html"
+                            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">Performances</a>
                         <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
                             <li><a class="dropdown-item text-light" href="BoilerRoom.html">BoilerRoom</a></li>
-                            <li><a class="dropdown-item text-light" href="Coachella.html">coachella</a></li>
+                            <li><a class="dropdown-item text-light" href="Coachella.html">Coachella</a></li>
                             <li><a class="dropdown-item text-light" href="Werchter.html">Werchter</a></li>
                         </ul>
                     </li>
+                    <!-- Regular navigation link -->
                     <li class="nav-item"><a class="nav-link text-light fs-3" href="SignUp.html">SignUp</a></li>
                 </ul>
+                <form class="form-inline mx-4 my-lg-0 ml-auto">
+                    <input class="form-inline mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
             </div>
-
-            <!-- Move the form outside of the collapsible area -->
-            <form class="form-inline mx-4 my-lg-0 ml-auto">
-                <input class="form-inline mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            <!-- Search form outside of the collapsible area -->
         </nav>
     </div>
-    
+    <main class="container">
+        <div class="mt-5 text-light bgmain">
+            <div class="row">
+                <p class="text-center fs-1">Tour Dates</p>
+                <div class="container">
+                    <table class="table text-light mb-5">
+                        <caption class="caption-top">
+                            <a class="text-decoration-none text-light" href="SignUp.html">Stay up to date by subscribing
+                                to Freds newsletter <i class="bi bi-envelope"></i></a>
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th>Event</th>
+                                <th>Date</th>
+                                <th>Venue</th>
+                                <th>Ticket Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Syd For Solen - Copenhagen</td>
+                                <td>August 8, 2024</td>
+                                <td>Syd For Solen, Copenhagen</td>
+                                <td><a href="https://link.seated.com/7772ede4-0a92-4359-a8bf-e1dab65ccd24"
+                                        target="_blank">Tickets</a></td>
+                            </tr>
+                            <tr>
+                                <td>Way Out West - Gothenburg</td>
+                                <td>August 8-10, 2024</td>
+                                <td>Way Out West, Gothenburg, Västra Götaland County</td>
+                                <td><a href="https://link.seated.com/7aa693ed-3bd6-4366-83c5-eafe1ffa39bc"
+                                        target="_blank">Tickets</a></td>
+                            </tr>
+                            <tr>
+                                <td>Flow Festival - Helsinki</td>
+                                <td>August 9-11, 2024</td>
+                                <td>Flow Festival, Helsinki, Finland</td>
+                                <td><a href="https://link.seated.com/7bcd173a-10b7-48a7-bb32-708d79d38cba"
+                                        target="_blank">Tickets</a></td>
+                            </tr>
+                            <tr>
+                                <td>Reading Festival - Reading</td>
+                                <td>August 22-25, 2024</td>
+                                <td>Reading Festival, Reading, Berkshire</td>
+                                <td><a href="https://link.seated.com/c1feda79-c1d6-43e3-a324-a382f8497b0e"
+                                        target="_blank">Tickets</a></td>
+                            </tr>
+                            <tr>
+                                <td>Leeds Festival - Leeds</td>
+                                <td>August 22-25, 2024</td>
+                                <td>Leeds Festival, Leeds, UK</td>
+                                <td><a href="https://link.seated.com/8ea4bcda-f8ac-4720-8148-6310e73dd298"
+                                        target="_blank">Tickets</a></td>
+                            </tr>
+                            <tr>
+                                <td>Rock en Seine - Saint-Cloud</td>
+                                <td>August 23, 2024</td>
+                                <td>Rock en Seine, Saint-Cloud, France</td>
+                                <td><a href="https://link.seated.com/fc9c2244-1da4-4730-a183-465c4105a129"
+                                        target="_blank">Tickets</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="Inhoud/perf/Werchter-rock.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="Inhoud/perf/Boiler-Room.jpeg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="Inhoud/perf/boiler2.webp" alt="Third slide">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center  my-4 border-top ">
+        <div href="contact.html" class="col-md-4 d-flex align-items-center">
+            <span class="ms-5 mb-md-0 text-light text-center fs-5">made by</span>
+            <a href="contact.html">
+                <img src="Inhoud/Br.logo.png" alt="Br.logo.png" width="50x">
+            </a>
+        </div>
+        <ul class="nav col-md-4 flex-row-reverse d-flex ">
+            <li class="me-5"><a class="text-light bi bi-twitter-x fs-2 " href="#"><svg class="" width="24" height="24">
+                        <use xlink:href="#twitter"></use>
+                    </svg></a></li>
+            <li class=""><a class="text-light bi bi-instagram fs-2" href="#"><svg class="" width="24" height="24">
+                        <use xlink:href="#instagram"></use>
+                    </svg></a></li>
+            <li class=""><a class="text-light bi bi-facebook fs-2 " href="#"><svg class="" width="24" height="24">
+                        <use xlink:href="#facebook"></use>
+                    </svg></a></li>
+        </ul>
+    </footer>
+</body>

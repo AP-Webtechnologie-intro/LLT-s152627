@@ -1,168 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link class="" rel="icon" href="Inhoud\favicon.ico">
-<title>Who's Fred?</title>
- <!-- Required meta tags -->
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-<!-- JavaScript: Bootstrap Bundle with Popper -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!-- own CSS -->
-<link rel="stylesheet" href="css/style.css">
+  <link class="" rel="icon" href="Inhoud\favicon.ico">
+  <title>Who's Fred?</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/tracktop.js" defer></script>
+  <script src="js/nav.js" defer></script>
 </head>
-
-
 <body>
-    <div id="picture" style="background-image: url('Inhoud/fred_banner_2.jpg');">
-        <nav class="navbar navbar-expand-lg navcolor">
-            <a class="navbar-brand" href="index.html"><img src="Inhoud/logo.png" alt="logo.png" width="200px"></a>
-
-            <!-- Collapsible wrapper -->
-            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon fs-1"></span>
-            </button>
-
-            <div class="collapse navbar-collapse justify-content-center" id="">
-                <!-- center links -->
-                <ul class="navbar-nav mr-auto mx-4 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link text-light fs-3" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <!-- who's dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active text-light fs-3" href="whofred.html" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Who'sFred?</a>
-                        <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li>
-                                <a class="dropdown-item text-light" href="whotony.html">Who'sTony?</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light fs-3" href="listen.html">Listen</a>
-                    </li>
-                   <!-- Social dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-light fs-3" href="Performances.html" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Performances</a>
-                    <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
-                        <li><a class="dropdown-item text-light" href="BoilerRoom.html">BoilerRoom</a></li>
-                        <li><a class="dropdown-item text-light" href="Coachella.html">coachella</a></li>
-                        <li><a class="dropdown-item text-light" href="Werchter.html">Werchter</a></li>
-                    </ul>
-                </li>                   
-                <li class="nav-item"><a class="nav-link text-light fs-3" href="SignUp.html">SignUp</a></li>
-                </ul>
-            </div>
-
-            <!-- Move the form outside of the collapsible area -->
-            <form class="form-inline mx-4 my-lg-0 ml-auto">
-                <input class="form-inline mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </nav>
-    </div>
-    
-<main class="border-top pt-5">
-  <h1 class="text-white text-center pb-5"> FRED AGAIN</h1>
-  <div class="container border-bottom pb-5">
-    <div class="row pt-4">
-      <div class="col-lg-4 col-sm-12 text-light text-lg-end text-sm-center pb-4">
-        <h3>Frederick John Philip Gibson (born 19 July 1993), known professionally as Fred Again or simply Fred, is an English record producer, singer, songwriter, multi-instrumentalist and DJ.</h3>
-        <!-- Hide on small screens, show on larger screens -->
-        <p class="fs-5 mt-5 d-none d-xl-block">Fred's rise in popularity seems to have stemmed from the release of 'Merea (we've lost dancing)', a song sampling the artist The Blessed Madonna talking about the importance of dancing and music during the pandemic. Not only speaking to the importance of music, the track includes messages of the vitality of friends.</p>
+  <div id="picture" style="background-image: url('Inhoud/fred_banner_2.jpg');" class="border-bottom">
+    <nav class="navbar navbar-expand-lg navcolor fixed-top ">
+      <a class="navbar-brand" href="index.html"><img src="Inhoud/logo.png" alt="logo.png"></a>
+      <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon fs-1"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link text-light fs-3" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light fs-3" href="summary.html">Summary</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light fs-3" href="whofred.html" id="navbarDarkDropdownMenuLink"
+              role="button" data-bs-toggle="dropdown" aria-expanded="false">Who'sFred?</a>
+            <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li>
+                <a class="dropdown-item text-light" href="whotony.html">Who'sTony?</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light fs-3" href="Performances.html" id="navbarDarkDropdownMenuLink"
+              role="button" data-bs-toggle="dropdown" aria-expanded="false">Performances</a>
+            <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item text-light" href="BoilerRoom.html">BoilerRoom</a></li>
+              <li><a class="dropdown-item text-light" href="Coachella.html">Coachella</a></li>
+              <li><a class="dropdown-item text-light" href="Werchter.html">Werchter</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link text-light fs-3" href="SignUp.html">SignUp</a></li>
+        </ul>
+        <form class="form-inline mx-4 my-lg-0 ml-auto">
+          <input class="form-inline mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
       </div>
-      <figure class="col-lg-8 col-sm-12 text-center figure">
-        <img src="Inhoud/fred1.jpg" class="mb-4 img-fluid h-100" alt="Responsive Image">
-      </figure>
-          </div>
+    </nav>
   </div>
-  
-      
-        <p class="container text-light mt-4 fs-4 text-center ">Mentored by Brian Eno as a teenager, he made his name as a writer-producer on hits like George Ezra's Shotgun, Ed Sheeran's Bad Habits, Stormzy's Own It and Charli XCX's After The Afterparty.
-
-          In 2020, the Brits named him producer of the year. At 26, he was the youngest-ever person to receive the award.
-          
-          Around the same time, he struck out as a solo artist, releasing a trilogy of albums that blended house beats with everyday sounds and conversations he collected on his phone.
-          
-          While most dance music is framed as escapism, his songs are intimate and heartfelt. The first volume of his Actual Life series was inspired by a friend who became ill and passed away; and the second is about coming to terms with that pain. </p>
-
-      <div class="container pt-4 border-top mt-4">
-        <div class="row">
-          <figure class="col-lg-8 col-sm-12">
-            <a href="whotony.html"><img src="Inhoud/tony3.jpeg" alt="Responsive Image" height="auto" width="100%"></a>
-          </figure>
-          <div class="col-lg-4 col-md-12 fs-4 text-light text-lg-start text-sm-center">
-            <p>
-              <a class="text-decoration-none text-light" href="whotony.html"><h1>Who's Tony Friend?</h1></a>
-              <p>Ever gone to a Fred Again.. show and wondered who the other energetic DJ on stage is? That would be the legend Tony Friend. He joined Fred Again.. on his fall UK tour in 2021 as an onstage DJ, and has been performing with Fred ever since. </p>
+  <main class="container pt-4 bgmain mt-5 ">
+    <h1 class="text-white text-center pb-2"> FRED AGAIN..</h1>
+    <div class="container border-bottom pb-5">
+      <div class="row pt-4 align-items-center">
+        <div class="col-lg-4 col-sm-12 text-light text-lg-end text-sm-center pb-4 ">
+          <h3>Frederick John Philip Gibson (born 19 July 1993), known professionally as Fred Again or simply Fred, is an
+            English record producer, singer, songwriter, multi-instrumentalist and DJ.</h3>
+          <p class="fs-5 mt-5 d-none d-xl-block">Fred's rise in popularity seems to have stemmed from the release of
+            'Merea (we've lost dancing)', a song sampling the artist The Blessed Madonna talking about the importance of
+            dancing and music during the pandemic. Not only speaking to the importance of music, the track includes
+            messages of the vitality of friends.</p>
         </div>
-        </div>
+        <figure class="col-lg-8 col-sm-12 text-center figure">
+          <img src="Inhoud/fred1.jpg" class="mb-4 img-fluid h-100" alt="Responsive Image">
+        </figure>
       </div>
-      <div class="border-top container mt-4 mb-4 "></div>
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner container-xl">
-          <figure class="carousel-item active">
-            <a href="BoilerRoom.html"><img class=" d-block w-100" src="Inhoud/Banners/boilerroom.banner.png" alt="First slide"></a>
-          </figure>
-          <figure class="carousel-item">
-            <a href="Coachella.html"><img class="d-block w-100" src="Inhoud/Banners/coachella.banner.png" alt="Second slide"></a>
-          </figure>
-          <figure class="carousel-item">
-            <a href="Werchter.html"><img class="d-block w-100" src="Inhoud/Banners/werchter.banner.png" alt="Third slide"></a>
-          </figure>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        </a>
-      </div>
-      <div class="border-top container-sm mt-4"></div>
-      <div class="container pt-4">
-        <div class="row">
-            <div class="col-lg-4 col-sm-12 fs-4 text-light text-lg-end text-sm-center">
-                <h1>Fred Again... </h1>
-                <p> There was a moment four years ago, when I was in the midst of working with a bunch of other people, and I had this really strong feeling that I needed to make something that I wasn't making. That feeling doesn't get smaller if you ignore it, so that kind of bubbled up and up. By some beautiful serendipity, at the same time, my mentor Brian Eno messaged me being like, "All right, Fred, enough. You've gotta go back to doing what you were doing when we met." From when I was 10 to 20, I was making my own s***. When Brian messaged me being like, "All right, enough," I was kind of on the edge of doing my own thing already, and he just pushed me over. Everything I make to varying degrees is still very collaborative. ... I'm just trying to express something that's in here [points to chest] as opposed to trying to combine my music with somebody else's.</p>
-              </div>
-          <div class="col-md-8 col-sm-12">
-            <img src="Inhoud/BRIXTON-DEC-22-750x1024.jpg" class="" alt="Responsive Image" height="1000px" width="auto">
-          </div>
-          
-        </div>
-      </div>
-</main>
-  
+    </div>
+    <div class="container border-bottom text-center mt-4 pb-3">
+      <iframe width="1200" height="600" src="https://www.youtube.com/embed/zeD0g5xXo7E?si=Nrlykus2-stl4gle"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+    <h1 class="text-center text-light m-4">AWARDS & NOMINATIONS</h1>
+    <div class="container m-4">
+      <table class="table table-dark">
+        <tbody>
+          <tr>
+            <th>Year</th>
+            <th>Awards</th>
+            <th>Work</th>
+            <th>Category</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td>2016</td>
+            <td>Ivor Novello Awards</td>
+            <td>"Cargo"Roots Manuva</td>
+            <td>Best Contemporary Song</td>
+            <td>Nominated</td>
+          </tr>
+          <tr>
+            <td>2018</td>
+            <td>A&amp;R Awards</td>
+            <td>Fred Again</td>
+            <td>Songwriter Of The Year</td>
+            <td>Nominated</td>
+          </tr>
+          <tr>
+            <td>2019</td>
+            <td>Ivor Novello Awards</td>
+            <td>Shotgun</td>
+            <td>PRS For Music Most Performed Work</td>
+            <td>Nominated</td>
+          </tr>
+          <tr>
+            <td>2020</td>
+            <td>Brit Awards</td>
+            <td>Fred Again</td>
+            <td>Producer of the Year</td>
+            <td>Won</td>
+          </tr>
+          <tr>
+            <td>2021</td>
+            <td>Grammy Awards</td>
+            <td>"Both Of Us" </td>
+            <td>Best Dance Recording</td>
+            <td>Nominated</td>
+          </tr>
+          <tr>
+            <td rowspan="4">2022</td>
+            <td>Brit Awards</td>
+            <td rowspan="2">Fred Again</td>
+            <td>Best Dance Act</td>
+            <td>Nominated</td>
+          </tr>
+          <tr>
+            <td>DJ Mag Best of British Awards</td>
+            <td>Best Live Act</td>
+            <td>Won</td>
+          </tr>
+          <tr>
+            <td>Grammy Awards</td>
+            <td>"Bad Habits"(Ed Sheeran)</td>
+            <td>Song of the Year</td>
+            <td>Nominated</td>
+          </tr>
+          <tr>
+            <td>Libera Awards</td>
+            <td>"Stay High again.."</td>
+            <td>Best Dance Record</td>
+            <td>Nominated</td>
+          </tr>
+          <tr>
+            <td rowspan="6">2023</td>
+            <td rowspan="3">Brit Awards</td>
+            <td rowspan="2">Fred Again</td>
+            <td>Artist of the Year</td>
+            <td>Nominated</td>
+          </tr>
+          <tr>
+            <td>Dance Act</td>
+            <td>Nominated</td>
+          </tr>
+          <tr>
+            <td>Actual Life 3</td>
+            <td>Album of the Year</td>
+            <td>Nominated</td>
+          </tr>
+          <tr>
+            <td rowspan="3">A&amp;R Awards</td>
+            <td rowspan="2">Fred Again</td>
+            <td>Producer Of The Year</td>
+            <td>Pending</td>
+          </tr>
+          <tr>
+            <td>Songwriter Of The Year</td>
+            <td>Pending</td>
+          </tr>
+          <tr>
+            <td>"Adore U"</td>
+            <td>Song Of The Year</td>
+            <td>Pending</td>
+          </tr>
+          <tr>
+            <td rowspan="4">2024</td>
+            <td rowspan="4">Grammy Awards</td>
+            <td>Fred Again</td>
+            <td>Best New Artist</td>
+            <td>Pending</td>
+          </tr>
+          <tr>
+            <td>"Strong" <span>(with Romy)</span></td>
+            <td rowspan="2">Best Dance/Electronic Recording</td>
+            <td>Pending</td>
+          </tr>
+          <tr>
+            <td>"Rumble" <span>(with Skrillex featuring Flowdan)</span></td>
+            <td>Pending</td>
+          </tr>
+          <tr>
+            <td>Actual Life 3</td>
+            <td>Best Dance/Electronic Album</td>
+            <td>Pending</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container pt-4 mt-4"></div>
+  </main>
   <footer class="d-flex flex-wrap justify-content-between align-items-center  my-4 border-top ">
     <div href="contact.html" class="col-md-4 d-flex align-items-center">
       <span class="ms-5 mb-md-0 text-light text-center fs-5">made by</span>
-      <a href="contact.html" target="_blank">
-          <img src="Inhoud/Br.logo.png" alt="Br.logo.png" width="50x">
+      <a href="contact.html">
+        <img src="Inhoud/Br.logo.png" alt="Br.logo.png" width="50x">
       </a>
     </div>
-  
     <ul class="nav col-md-4 flex-row-reverse d-flex ">
-      <li class="me-5"><a class="text-light bi bi-twitter-x fs-2 " href="#"><svg class="" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-      <li class=""><a class="text-light bi bi-instagram fs-2" href="#"><svg class="" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-      <li class=""><a class="text-light bi bi-facebook fs-2 " href="#"><svg class="" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+      <li class="me-5"><a class="text-light bi bi-twitter-x fs-2 " href="#"><svg class="" width="24" height="24">
+            <use xlink:href="#twitter"></use>
+          </svg></a></li>
+      <li class=""><a class="text-light bi bi-instagram fs-2" href="#"><svg class="" width="24" height="24">
+            <use xlink:href="#instagram"></use>
+          </svg></a></li>
+      <li class=""><a class="text-light bi bi-facebook fs-2 " href="#"><svg class="" width="24" height="24">
+            <use xlink:href="#facebook"></use>
+          </svg></a></li>
     </ul>
   </footer>
-
-
-
-  
-
 </body>
-
 </html>

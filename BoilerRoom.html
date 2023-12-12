@@ -1,98 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link class="" rel="icon" href="Inhoud\favicon.ico">
-<title>Home</title>
- <!-- Required meta tags -->
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-<!-- JavaScript: Bootstrap Bundle with Popper -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!-- own CSS -->
-<link rel="stylesheet" href="css/style.css">
+  <link class="" rel="icon" href="Inhoud\favicon.ico">
+  <title>boilerroom</title>
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <!-- JavaScript: Bootstrap Bundle with Popper -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!-- own CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/nav.js" defer></script>
+  <script src="js/boiler.js" defer></script>
+  <!-- voeg het leaflet css-bestand toe om de kaart van standaard opmaak te voorzien -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <!-- voeg het mapStyle.css bestand toe. Hierin zetten we alle css specifiek voor de kaart -->
+  <link rel="stylesheet" href="css/mapStyle.css">
+  <!-- voeg de leaflet.js javascript toe aan de pagina en check de integriteit ervan -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
-
-
 <body>
-    <div id="picture" style="background-image: url('Inhoud/fred_banner_1.jpg');">
-        <nav class="navbar navbar-expand-lg navcolor">
-            <a class="navbar-brand" href="index.html"><img src="Inhoud/logo.png" alt="logo.png" width="200px"></a>
-
-            <!-- Collapsible wrapper -->
-            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon fs-1"></span>
-            </button>
-
-            <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo02">
-                <!-- center links -->
-                <ul class="navbar-nav mr-auto mx-4 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active text-light fs-3" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <!-- who's dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light fs-3" href="whofred.html" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Who'sFred?</a>
-                        <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li>
-                                <a class="dropdown-item text-light" href="whotony.html">Who'sTony?</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light fs-3" href="listen.html">Listen</a>
-                    </li>
-                    <!-- Social dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light fs-3" href="Performances.html" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Performances</a>
-                        <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item text-light" href="BoilerRoom.html">BoilerRoom</a></li>
-                            <li><a class="dropdown-item text-light" href="Coachella.html">coachella</a></li>
-                            <li><a class="dropdown-item text-light" href="Werchter.html">Werchter</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link text-light fs-3" href="SignUp.html">SignUp</a></li>
-                </ul>
+  <div id="picture" style="background-image: url('Inhoud/Boiler-Room.jpeg');" class="border-bottom">
+    <!-- Navigation bar using Bootstrap classes -->
+    <nav class="navbar navbar-expand-lg navcolor fixed-top ">
+      <!-- Brand/logo on the left side -->
+      <a class="navbar-brand" href="index.html"><img src="Inhoud/logo.png" alt="logo.png"></a>
+      <!-- Collapsible wrapper for responsive design -->
+      <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon fs-1"></span>
+      </button>
+      <!-- Collapsible content for navigation links -->
+      <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
+        <!-- Centered navigation links -->
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link text-light fs-3" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light fs-3" href="summary.html">Summary</a>
+          </li>
+          <!-- Dropdown for "Who'sFred?" -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light fs-3" href="whofred.html" id="navbarDarkDropdownMenuLink"
+              role="button" data-bs-toggle="dropdown" aria-expanded="false">Who'sFred?</a>
+            <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li>
+                <a class="dropdown-item text-light" href="whotony.html">Who'sTony?</a>
+              </li>
+            </ul>
+          </li>
+          <!-- Dropdown for "Performances" -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light fs-3" href="Performances.html" id="navbarDarkDropdownMenuLink"
+              role="button" data-bs-toggle="dropdown" aria-expanded="false">Performances</a>
+            <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item text-light" href="BoilerRoom.html">BoilerRoom</a></li>
+              <li><a class="dropdown-item text-light" href="Coachella.html">Coachella</a></li>
+              <li><a class="dropdown-item text-light" href="Werchter.html">Werchter</a></li>
+            </ul>
+          </li>
+          <!-- Regular navigation link -->
+          <li class="nav-item"><a class="nav-link text-light fs-3" href="SignUp.html">SignUp</a></li>
+        </ul>
+        <form class="form-inline mx-4 my-lg-0 ml-auto">
+          <input class="form-inline mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+      <!-- Search form outside of the collapsible area -->
+    </nav>
+  </div>
+  <main class="container bgmain pb-3">
+    <div class="row text-light fs-4 m-4 pt-4">
+      <h1>Boiler Room: Global Hub for Musical Exploration</h1>
+      <p class="p-4">Boiler Room, a prominent online music broadcaster and club promoter headquartered in London, United
+        Kingdom, has established itself as a global phenomenon, redefining the music experience for enthusiasts around
+        the world.</p>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="Inhoud\perf\boiler2.webp" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="Inhoud\boiler\boiler_room_2.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="Inhoud\boiler\boiler_room_1.webp" alt="Third slide">
+          </div>
+        </div>
+      </div>
+      <p class="p-4">Boiler Room's journey began as a platform primarily focusing on dance music genres such as garage,
+        house, techno, and dub. Over the years, the brand has evolved, expanding its reach and embracing a diverse array
+        of musical expressions, including grime, hip hop, classical, and jazz. The result is an eclectic mix that caters
+        to a broad spectrum of musical tastes.</p>
+      <p class="p-4 border-bottom">With regular operations in major cities like London, Amsterdam, New York City,
+        Berlin, Lisbon, São Paulo, Mexico City, Tokyo, Sydney, Lima, and Los Angeles, Boiler Room has become synonymous
+        with hosting intimate and immersive live events. The platform's global footprint is a testament to its
+        commitment to bringing unique and diverse musical experiences to audiences worldwide. Boiler Room stands out for
+        its innovative approach to showcasing live performances. By broadcasting shows over the internet, the platform
+        allows global audiences to tune in and experience the energy of live events in real-time. The live streaming
+        format has become a signature feature, connecting fans with both established and emerging artists in intimate
+        settings.</p>
+      <h1 class="mb-5 mt-3">Fred Again.. at Boiler Room Londen</h1>
+      <iframe class="border-bottom pb-5 mb-5 " width="1250" height="703" src="https://www.youtube.com/embed/7N61XFjCg2Y"
+        title="🎵Fred again.. ft. Kodak Black - Kahan (Last Year) 🎵 | 2022 Boiler Room Mix" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+      <table class="table table-dark mb-5 fs-5">
+        <caption class="caption-top text-white fs-1 mb-5">
+          Boiler room setlist
+        </caption>
+        <tr>
+          <th>Track</th>
+          <th>Song</th>
+        </tr>
+        <tr>
+          <td>Fred again..</td>
+          <td>Kammy (like I do)</td>
+        </tr>
+        <tr>
+          <td>Fred again..</td>
+          <td>Danielle (Smile On My Face)</td>
+        </tr>
+        <tr>
+          <td>Fred again..</td>
+          <td>Tanya (Maybe Life)</td>
+        </tr>
+        <tr>
+          <td>Fred again..</td>
+          <td>Pull Me Out</td>
+        </tr>
+        <tr>
+          <td>Overmono vs. Lil Baby</td>
+          <td>BBY vs. Real As It Gets</td>
+        </tr>
+        <tr>
+          <td>Skrillex & Fred again.. </td>
+          <td>Stay with me</td>
+        </tr>
+        <tr>
+          <td>Headie One ft. Skepta </td>
+          <td>Back to basics Headie One - PTSD</td>
+        </tr>
+        <tr>
+          <td>KH</td>
+          <td>Feelings</td>
+        </tr>
+        <tr>
+          <td>Fred again.. & Romy </td>
+          <td>Strong</td>
+        </tr>
+        <tr>
+          <td>Swedish House Mafia ft. Future</td>
+          <td>Turn On The Lights Again..</td>
+        </tr>
+        <tr>
+          <td>Fred again..</td>
+          <td>Jungle</td>
+        </tr>
+        <tr>
+          <td>Fred again.. & Romy & HAAi</td>
+          <td>Lights Out w/ Fred again.. (DnB Edit)</td>
+        </tr>
+        <tr>
+          <td>Fred again.. ft. Kodak Black</td>
+          <td>Kahan (Last Year)</td>
+        </tr>
+        <tr>
+          <td>Fred again.. & Skrillex & Four Tet</td>
+          <td>Baby Again.. </td>
+        </tr>
+        <tr>
+          <td>Skrillex & Four Tet ft. Flowdan</td>
+          <td>Rumble</td>
+        </tr>
+        <tr>
+          <td>Fred again.. & Beverly Craven</td>
+          <td>Promise me</td>
+        </tr>
+        <tr>
+          <td>Fred again..</td>
+          <td>Wish I Had U</td>
+        </tr>
+        <tr>
+          <td>Faisal</td>
+          <td>Envelops Me Acappella</td>
+        </tr>
+      </table>
+      <h1 class="mb-5 border-top pt-4">Location: Boiler Room Londen</h1>
+      <section id="map"
+        class="row leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+        style="position: relative;" tabindex="0">
+        <div id="apMap"></div>
+        <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);">
+          <div class="leaflet-pane leaflet-tile-pane">
+            <div class="leaflet-layer " style="z-index: 1; opacity: 1;">
+              <div class="leaflet-tile-container leaflet-zoom-animated"
+                style="z-index: 17; transform: translate3d(-9px, 2px, 0px) scale(1);"><img alt=""
+                  src="https://tile.openstreetmap.org/17/67143/43746.png" class="leaflet-tile leaflet-tile-loaded"
+                  style="width: 256px; height: 256px; transform: translate3d(192px, 130px, 0px); opacity: 1;"><img
+                  alt="" src="https://tile.openstreetmap.org/17/67144/43746.png"
+                  class="leaflet-tile leaflet-tile-loaded"
+                  style="width: 256px; height: 256px; transform: translate3d(448px, 130px, 0px); opacity: 1;"><img
+                  alt="" src="https://tile.openstreetmap.org/17/67143/43745.png"
+                  class="leaflet-tile leaflet-tile-loaded"
+                  style="width: 256px; height: 256px; transform: translate3d(192px, -126px, 0px); opacity: 1;"><img
+                  alt="" src="https://tile.openstreetmap.org/17/67144/43745.png"
+                  class="leaflet-tile leaflet-tile-loaded"
+                  style="width: 256px; height: 256px; transform: translate3d(448px, -126px, 0px); opacity: 1;"><img
+                  alt="" src="https://tile.openstreetmap.org/17/67143/43747.png"
+                  class="leaflet-tile leaflet-tile-loaded"
+                  style="width: 256px; height: 256px; transform: translate3d(192px, 386px, 0px); opacity: 1;"><img
+                  alt="" src="https://tile.openstreetmap.org/17/67144/43747.png"
+                  class="leaflet-tile leaflet-tile-loaded"
+                  style="width: 256px; height: 256px; transform: translate3d(448px, 386px, 0px); opacity: 1;"><img
+                  alt="" src="https://tile.openstreetmap.org/17/67142/43746.png"
+                  class="leaflet-tile leaflet-tile-loaded"
+                  style="width: 256px; height: 256px; transform: translate3d(-64px, 130px, 0px); opacity: 1;"><img
+                  alt="" src="https://tile.openstreetmap.org/17/67145/43746.png"
+                  class="leaflet-tile leaflet-tile-loaded"
+                  style="width: 256px; height: 256px; transform: translate3d(704px, 130px, 0px); opacity: 1;"><img
+                  alt="" src="https://tile.openstreetmap.org/17/67142/43745.png"
+                  class="leaflet-tile leaflet-tile-loaded"
+                  style="width: 256px; height: 256px; transform: translate3d(-64px, -126px, 0px); opacity: 1;"><img
+                  alt="" src="https://tile.openstreetmap.org/17/67145/43745.png"
+                  class="leaflet-tile leaflet-tile-loaded"
+                  style="width: 256px; height: 256px; transform: translate3d(704px, -126px, 0px); opacity: 1;"><img
+                  alt="" src="https://tile.openstreetmap.org/17/67142/43747.png"
+                  class="leaflet-tile leaflet-tile-loaded"
+                  style="width: 256px; height: 256px; transform: translate3d(-64px, 386px, 0px); opacity: 1;"><img
+                  alt="" src="https://tile.openstreetmap.org/17/67145/43747.png"
+                  class="leaflet-tile leaflet-tile-loaded"
+                  style="width: 256px; height: 256px; transform: translate3d(704px, 386px, 0px); opacity: 1;"></div>
+              <div class="leaflet-tile-container leaflet-zoom-animated"
+                style="z-index: 15; transform: translate3d(-45px, -536px, 0px) scale(4);"></div>
             </div>
-
-            <!-- Move the form outside of the collapsible area -->
-            <form class="form-inline mx-4 my-lg-0 ml-auto">
-                <input class="form-inline mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </nav>
+          </div>
+          <div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated"
+              width="990" height="600" style="transform: translate3d(-82px, -50px, 0px);" viewBox="-82 -50 990 600">
+              <g>
+                <path class="leaflet-interactive" stroke="#ff7800" stroke-opacity="1" stroke-width="1"
+                  stroke-linecap="round" stroke-linejoin="round" fill="#ff7800" fill-opacity="0.2" fill-rule="evenodd"
+                  d="M345 289L345 215L462 215L462 289z"></path>
+              </g>
+            </svg></div>
+          <div class="leaflet-pane leaflet-shadow-pane"><img
+              src="https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png"
+              class="leaflet-marker-shadow leaflet-zoom-animated"
+              style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(407px, 263px, 0px);"
+              alt=""></div>
+          <div class="leaflet-pane leaflet-marker-pane"><img
+              src="https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png"
+              class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
+              style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(407px, 263px, 0px); z-index: 263;"
+              alt="Marker" tabindex="0" role="button"></div>
+          <div class="leaflet-pane leaflet-tooltip-pane"></div>
+          <div class="leaflet-pane leaflet-popup-pane"></div>
+          <div class="leaflet-proxy leaflet-zoom-animated"
+            style="transform: translate3d(17188800px, 11199100px, 0px) scale(65536);"></div>
+        </div>
+        <div class="leaflet-control-container">
+          <div class="leaflet-top leaflet-left">
+            <div class="leaflet-control-zoom leaflet-bar leaflet-control"><a
+                class="leaflet-control-zoom-in leaflet-disabled" href="#" title="Zoom in" role="button"
+                aria-label="Zoom in" aria-disabled="true"><span aria-hidden="true">+</span></a><a
+                class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out"
+                aria-disabled="false"><span aria-hidden="true">−</span></a></div>
+          </div>
+          <div class="leaflet-top leaflet-right"></div>
+          <div class="leaflet-bottom leaflet-left"></div>
+          <div class="leaflet-bottom leaflet-right">
+            <div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com"
+                title="A JavaScript library for interactive maps"><svg aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"
+                  class="leaflet-attribution-flag">
+                  <path fill="#4C7BE1" d="M0 0h12v4H0z"></path>
+                  <path fill="#FFD500" d="M0 4h12v3H0z"></path>
+                  <path fill="#E0BC00" d="M0 7h12v1H0z"></path>
+                </svg> Leaflet</a> <span aria-hidden="true">|</span> © <a
+                href="http://www.openstreetmap.org/copyright">OpenStreetMap</a></div>
+          </div>
+        </div>
+      </section>
     </div>
-    
-    <main class="border-top">
-
-      
-  
   </main>
-  
   <footer class="d-flex flex-wrap justify-content-between align-items-center  my-4 border-top ">
     <div href="contact.html" class="col-md-4 d-flex align-items-center">
       <span class="ms-5 mb-md-0 text-light text-center fs-5">made by</span>
-      <a href="contact.html" target="_blank">
-          <img src="Inhoud/Br.logo.png" alt="Br.logo.png" width="50x">
+      <a href="contact.html">
+        <img src="Inhoud/Br.logo.png" alt="Br.logo.png" width="50x">
       </a>
     </div>
-  
     <ul class="nav col-md-4 flex-row-reverse d-flex ">
-      <li class="me-5"><a class="text-light bi bi-twitter-x fs-2 " href="#"><svg class="" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-      <li class=""><a class="text-light bi bi-instagram fs-2" href="#"><svg class="" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-      <li class=""><a class="text-light bi bi-facebook fs-2 " href="#"><svg class="" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+      <li class="me-5"><a class="text-light bi bi-twitter-x fs-2 " href="#"><svg class="" width="24" height="24">
+            <use xlink:href="#twitter"></use>
+          </svg></a></li>
+      <li class=""><a class="text-light bi bi-instagram fs-2" href="#"><svg class="" width="24" height="24">
+            <use xlink:href="#instagram"></use>
+          </svg></a></li>
+      <li class=""><a class="text-light bi bi-facebook fs-2 " href="#"><svg class="" width="24" height="24">
+            <use xlink:href="#facebook"></use>
+          </svg></a></li>
     </ul>
   </footer>
-
-
-
-  
-
 </body>
-
 </html>
