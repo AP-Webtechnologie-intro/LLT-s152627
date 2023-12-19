@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link class="" rel="icon" href="Inhoud\favicon.ico">
+  <!-- Favicon for the website -->
+  <link rel="icon" href="Inhoud\favicon.ico">
+
+  <!-- Title of the webpage -->
   <title>Who's Tony?</title>
-  <!-- Required meta tags -->
+
+  <!-- Required meta tags for responsive design -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  
   <!-- JavaScript: Bootstrap Bundle with Popper -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -21,12 +29,16 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-  <!-- own CSS -->
+  
+  <!-- Custom CSS styles -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Custom JavaScript for navigation (defer attribute for asynchronous loading) -->
   <script src="js/nav.js" defer></script>
 </head>
+
 <body>
-  <div id="picture" style="background-image: url('Inhoud/fred_banner_3.jpg');" class="border-bottom">
+  <section id="picture" style="background-image: url('Inhoud/fred_banner_3.jpg');" class="border-bottom">
     <!-- Navigation bar using Bootstrap classes -->
     <nav class="navbar navbar-expand-lg navcolor fixed-top ">
       <!-- Brand/logo on the left side -->
@@ -37,7 +49,7 @@
         <span class="navbar-toggler-icon fs-1"></span>
       </button>
       <!-- Collapsible content for navigation links -->
-      <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
+      <section class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
         <!-- Centered navigation links -->
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
@@ -73,33 +85,31 @@
           <input class="form-inline mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
         </form>
-      </div>
+      </section>
       <!-- Search form outside of the collapsible area -->
     </nav>
-  </div>
+  </section>
   <main class="container pt-5 bgmain mt-5">
-    <div class="container">
+    <section class="container">
       <div class="row pt-4">
         <!-- Other content in the remaining 3 columns (col-md-3) -->
-        <div class="col-lg-4 col-sm-12 fs-4 text-light text-end ">
-          <h1>Who's Tony Friend?</h1>
-          <br>
-          <br>
+        <article class="col-lg-4 col-sm-12 fs-4 text-light text-end text-sm-center">
+          <h1 class="mb-5">Who's Tony Friend?</h1>
           <p>Ever gone to a Fred Again.. show and wondered who the other energetic DJ on stage is? That would be the
             legend Tony Friend. He joined Fred Again.. on his fall UK tour in 2021 as an onstage DJ, and has been
             performing with Fred ever since. </p>
-        </div>
-        <div class="col-lg-8 col-sm-12">
+        </article>
+        <figure class="col-lg-8 col-sm-12">
           <img src="Inhoud/tony3.jpeg" class="" alt="Responsive Image" height="auto" width="100%">
-        </div>
+        </figure>
       </div>
-    </div>
-    <div class="container pt-5">
+    </section>
+    <section class="container pt-5">
       <div class="row">
-        <div class="col-lg-8 col-sm-12">
+        <figure class="col-lg-8 col-sm-12 ">
           <img src="Inhoud/tony3.jpg" class="" alt="Responsive Image" height="auto" width="100%">
-        </div>
-        <div class="col-lg-4 col-md-12 fs-4 text-light mt-3">
+        </figure>
+        <article class="col-lg-4 col-md-12 fs-4 text-light mt-3 text-sm-center">
           <p>Tony Friend in his own right is a talented and accomplished DJ and producer who was in the North London
             Dubstep group Modestep. Known as the masked DJ who played guitar and produced, Tony was an optimal part of
             the group until he left in 2017 to start a solo career. </p>
@@ -107,12 +117,12 @@
             Although the stage name may suggest an aggressive tone, his music is anything but combative. Most known for
             his “intricate attention to detail and surprising amount of musicality, Terror brings something fresh and
             new to the world of Drum and Bass.”</p>
-        </div>
+        </article>
       </div>
-    </div>
-    <div class="container pt-5 border-top mt-5">
+    </section>
+    <section class="container pt-5 border-top mt-5">
       <div class="row ">
-        <div class="col-lg-6 col-md-12 fs-4 text-light ">
+        <article class="col-lg-6 col-md-12 fs-4 text-light ">
           <p class="m-5">Fred Again.. posted an Instagram dedicating his appreciation for Tony, captioning it, “We love
             Tony.” Fred’s love for Tony is reciprocated by his fans who tend to leave comments and praises on posts
             like, “In Tony we trust,” and “We f*****g love Tony.” It is evident that you can’t be a Fred Again.. fan
@@ -121,8 +131,8 @@
             src="https://open.spotify.com/embed/album/4ZBcaTff0VC6IIlrybucIB?utm_source=generator" width="100%"
             height="352" frameBorder="0" allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-        </div>
-        <div class="col-lg-6 col-sm-12">
+        </article>
+        <article class="col-lg-6 col-sm-12">
           <blockquote class="instagram-media"
             data-instgrm-permalink="https://www.instagram.com/reel/CclcAcHIThz/?utm_source=ig_embed&amp;utm_campaign=loading"
             data-instgrm-version="14"
@@ -214,17 +224,17 @@
             </div>
           </blockquote>
           <script async src="//www.instagram.com/embed.js"></script>
-        </div>
+        </article>
       </div>
-    </div>
+    </section>
   </main>
   <footer class="d-flex flex-wrap justify-content-between align-items-center  my-4 border-top ">
-    <div href="contact.html" class="col-md-4 d-flex align-items-center">
+    <address href="contact.html" class="col-md-4 d-flex align-items-center">
       <span class="ms-5 mb-md-0 text-light text-center fs-5">made by</span>
       <a href="contact.html">
         <img src="Inhoud/Br.logo.png" alt="Br.logo.png" width="50x">
       </a>
-    </div>
+    </address>
     <ul class="nav col-md-4 flex-row-reverse d-flex ">
       <li class="me-5"><a class="text-light bi bi-twitter-x fs-2 " href="#"><svg class="" width="24" height="24">
             <use xlink:href="#twitter"></use>

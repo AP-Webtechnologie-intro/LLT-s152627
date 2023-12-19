@@ -33,7 +33,7 @@
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 <body>
-  <div id="picture" style="background-image: url('Inhoud/werchter20231.jpg');" class="border-bottom">
+  <section id="picture" style="background-image: url('Inhoud/werchter20231.jpg');" class="border-bottom">
     <!-- Navigation bar using Bootstrap classes -->
     <nav class="navbar navbar-expand-lg navcolor fixed-top ">
       <!-- Brand/logo on the left side -->
@@ -44,7 +44,7 @@
         <span class="navbar-toggler-icon fs-1"></span>
       </button>
       <!-- Collapsible content for navigation links -->
-      <div class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
+      <section class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
         <!-- Centered navigation links -->
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
@@ -80,10 +80,10 @@
           <input class="form-inline mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
         </form>
-      </div>
+      </section>
       <!-- Search form outside of the collapsible area -->
     </nav>
-  </div>
+  </section>
   <main class="container bgmain pb-3">
     <div class="row text-light fs-4 m-4 pt-4">
       <h1>Rock Werchter: Europe's Premier Music Festival Extravaganza</h1>
@@ -120,10 +120,13 @@
         musical moments and embracing progressive values, Rock Werchter stands as a testament to the enduring spirit of
         live music and cultural celebration.</p>
       <h1 class="mb-5 mt-3">Fred Again.. at Rock Werchter</h1>
-      <iframe width="910" height="512" src="https://www.youtube.com/embed/xPXJT4CYrzM"
-        title="Fred Again - I adore u (Live @rockwerchterfestival 2023!)" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+
+        <div class="ratio ratio-16x9 mt-4">
+          <iframe src="https://www.youtube.com/embed/xPXJT4CYrzM" title="Fred Again - I adore u (Live @rockwerchterfestival 2023!)" style="max-width: 100%;height: 100%;" allowfullscreen></iframe>
+          </div>
+    
+
+
       <table class="table table-dark mb-5 fs-5">
         <caption class="caption-top text-white fs-1 mb-5">
           Boiler room setlist
