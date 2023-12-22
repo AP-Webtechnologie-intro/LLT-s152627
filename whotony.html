@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Favicon for the website -->
   <link rel="icon" href="Inhoud\favicon.ico">
-
   <!-- Title of the webpage -->
   <title>Who's Tony?</title>
-
   <!-- Required meta tags for responsive design -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-  
   <!-- JavaScript: Bootstrap Bundle with Popper -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -29,10 +25,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-  
   <!-- Custom CSS styles -->
   <link rel="stylesheet" href="css/style.css">
-
   <!-- Custom JavaScript for navigation (defer attribute for asynchronous loading) -->
   <script src="js/nav.js" defer></script>
 </head>
@@ -42,7 +36,7 @@
     <!-- Navigation bar using Bootstrap classes -->
     <nav class="navbar navbar-expand-lg navcolor fixed-top ">
       <!-- Brand/logo on the left side -->
-      <a class="navbar-brand" href="index.html"><img src="Inhoud/logo.png" alt="logo.png"></a>
+      <a class="navbar-brand" href="index.html"><img src="Inhoud/logo.png" alt="logo nav"></a>
       <!-- Collapsible wrapper for responsive design -->
       <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
         aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,7 +58,7 @@
               role="button" data-bs-toggle="dropdown" aria-expanded="false">Who'sFred?</a>
             <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
               <li>
-                <a class="dropdown-item text-light" href="whotony.html">Who'sTony?</a>
+                <a class="dropdown-item text-light active" href="whotony.html">Who'sTony?</a>
               </li>
             </ul>
           </li>
@@ -80,6 +74,7 @@
           </li>
           <!-- Regular navigation link -->
           <li class="nav-item"><a class="nav-link text-light fs-3" href="SignUp.html">SignUp</a></li>
+          <li class="nav-item"><a class="nav-link text-light fs-3" href="contact.html">Contact</a></li>
         </ul>
         <form class="form-inline mx-4 my-lg-0 ml-auto">
           <input class="form-inline mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -100,14 +95,14 @@
             performing with Fred ever since. </p>
         </article>
         <figure class="col-lg-8 col-sm-12">
-          <img src="Inhoud/tony3.jpeg" class="" alt="Responsive Image" height="auto" width="100%">
+          <img src="Inhoud/tony3.jpeg" class="" alt="picture tony" height="auto" width="100%">
         </figure>
       </div>
     </section>
-    <section class="container pt-5">
+    <section class="container pt-5 border-bottom">
       <div class="row">
         <figure class="col-lg-8 col-sm-12 ">
-          <img src="Inhoud/tony3.jpg" class="" alt="Responsive Image" height="auto" width="100%">
+          <img src="Inhoud/tony3.jpg" class="" alt="picture tony" height="auto" width="100%">
         </figure>
         <article class="col-lg-4 col-md-12 fs-4 text-light mt-3 text-sm-center">
           <p>Tony Friend in his own right is a talented and accomplished DJ and producer who was in the North London
@@ -120,6 +115,55 @@
         </article>
       </div>
     </section>
+    <table class="table-dark table mt-5">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Artist</th>
+          <th>Track Title</th>
+          <th>Remix Artist</th>
+          <th>Label</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Terror</td>
+          <td>Let Me In feat. Jim Lawton</td>
+          <td>-</td>
+          <td>Spearhead Records</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Terror</td>
+          <td>Loaded Gun Feat. Espa (BCee Remix)</td>
+          <td>BCee</td>
+          <td>Spearhead Records</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Terror</td>
+          <td>Damages Feat. Pastry Maker</td>
+          <td>-</td>
+          <td>Spearhead Records</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Terror & IN:MOST</td>
+          <td>Shangri-La</td>
+          <td>-</td>
+          <td>Spearhead Records</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Terror</td>
+          <td>Rivers Feat. Lottie Woodward</td>
+          <td>-</td>
+          <td>Spearhead Records</td>
+        </tr>
+      </tbody>
+    </table>
+
     <section class="container pt-5 border-top mt-5">
       <div class="row ">
         <article class="col-lg-6 col-md-12 fs-4 text-light ">
@@ -220,7 +264,8 @@
                 style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
                 <a href="https://www.instagram.com/reel/CclcAcHIThz/?utm_source=ig_embed&amp;utm_campaign=loading"
                   style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
-                  target="_blank">Een bericht gedeeld door Fred again.. (@fredagainagainagainagainagain)</a></p>
+                  target="_blank">Een bericht gedeeld door Fred again.. (@fredagainagainagainagainagain)</a>
+              </p>
             </div>
           </blockquote>
           <script async src="//www.instagram.com/embed.js"></script>
@@ -232,7 +277,7 @@
     <address href="contact.html" class="col-md-4 d-flex align-items-center">
       <span class="ms-5 mb-md-0 text-light text-center fs-5">made by</span>
       <a href="contact.html">
-        <img src="Inhoud/Br.logo.png" alt="Br.logo.png" width="50x">
+        <img src="Inhoud/Br.logo.png" alt="banner logo" width="50x">
       </a>
     </address>
     <ul class="nav col-md-4 flex-row-reverse d-flex ">
@@ -248,4 +293,5 @@
     </ul>
   </footer>
 </body>
+
 </html>

@@ -31,6 +31,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <script src="js/nav.js" defer></script>
+    <script src="js\search.js" defer></script>
+    
 </head>
 <body>
     <!-- The main container with a background image -->
@@ -38,7 +40,7 @@
         <!-- Navigation bar using Bootstrap classes -->
         <nav class="navbar navbar-expand-lg navcolor fixed-top ">
             <!-- Brand/logo on the left side -->
-            <a class="navbar-brand" href="index.html"><img src="Inhoud/logo.png" alt="logo.png"></a>
+            <a class="navbar-brand" href="index.html"><img src="Inhoud/logo.png" alt="logo nav"></a>
             <!-- Collapsible wrapper for responsive design -->
             <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse"
                 data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
@@ -50,7 +52,7 @@
                 <!-- Centered navigation links -->
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-light fs-3" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link text-light fs-3 active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light fs-3" href="summary.html">Summary</a>
@@ -79,9 +81,10 @@
                     </li>
                     <!-- Regular navigation link -->
                     <li class="nav-item"><a class="nav-link text-light fs-3" href="SignUp.html">SignUp</a></li>
+                    <li class="nav-item"><a class="nav-link text-light fs-3" href="contact.html">Contact</a></li>
                 </ul>
                 <form class="form-inline mx-4 my-lg-0 ml-auto">
-                    <input class="form-inline mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-inline mr-sm-2" id="searchInput" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </section>
@@ -137,7 +140,7 @@
         <address href="contact.html" class="col-md-4 d-flex align-items-center">
             <span class="ms-5 mb-md-0 text-light text-center fs-5">made by</span>
             <a href="contact.html">
-                <img src="Inhoud/Br.logo.png" alt="Br.logo.png" width="50x">
+                <img src="Inhoud/Br.logo.png" alt="logo banner" width="50x">
             </a>
         </address>
         <ul class="nav col-md-4 flex-row-reverse d-flex ">

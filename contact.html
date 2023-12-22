@@ -44,7 +44,7 @@
         <!-- Navigation bar using Bootstrap classes -->
         <nav class="navbar navbar-expand-lg navcolor fixed-top ">
             <!-- Brand/logo on the left side -->
-            <a class="navbar-brand" href="index.html"><img src="Inhoud/logo.png" alt="logo.png"></a>
+            <a class="navbar-brand" href="index.html"><img src="Inhoud/logo.png" alt="logo nav"></a>
             <!-- Collapsible wrapper for responsive design -->
             <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse"
                 data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
@@ -85,6 +85,7 @@
                     </li>
                     <!-- Regular navigation link -->
                     <li class="nav-item"><a class="nav-link text-light fs-3" href="SignUp.html">SignUp</a></li>
+                    <li class="nav-item"><a class="nav-link text-light fs-3 active" href="contact.html">Contact</a></li>
                 </ul>
             </section>
             <!-- Search form outside of the collapsible area -->
@@ -96,18 +97,17 @@
     </section>
     <main class="border-top">
         <div class="container-xl pe-3 ">
-            <div class="row">
-                <div class="col-md-9">
+            <article class="row">
+                <section class="col-md-9 mb-5">
                     <br>
                     <br>
                     <p class="text-light fs-3">Welcome to BR-Graphics, where creativity and innovation converge to craft
                         unique digital experiences. If you have any questions, want to learn more about our services, or
                         are interested in a collaboration, we're here to listen!</p>
                     <p class="text-light fs-3 col-md-9">Feel free to reach out to us using the details below:</p>
-                </div>
+                </section>
                 <p class="col-md-3"><img src="Inhoud/Br.logo.png" width="250" height="250"></p>
-                <div class="container-xl" style="height: 100px;"></div>
-                <div class="row">
+                <section class="row">
                     <div class="col-md-5 text-end">
                         <p class=""><a class="text-light fs-2 bi me-5" style="text-decoration:none"
                                 href="mailto:bramreyniers@noway.com">info@graficsbr.com</a><i
@@ -121,6 +121,7 @@
                             Creatievestad
                         </p>
                     </div>
+                    <!-- space between leaflet and info  -->
                     <div class="col-md-1"></div>
                     <!-- Leaflet  -->
                     <div class="col-md-6 pe-3">
@@ -226,16 +227,18 @@
                             </div>
                         </section>
                     </div>
-                </div>
-            </div>
+                </section>
+            </article>
+        </div>
+
     </main>
     <footer class="d-flex flex-wrap justify-content-between align-items-center  my-4 border-top ">
-        <div href="contact.html" class="col-md-4 d-flex align-items-center">
+        <address href="contact.html" class="col-md-4 d-flex align-items-center">
             <span class="ms-5 mb-md-0 text-light text-center fs-5">made by</span>
             <a href="contact.html">
-                <img src="Inhoud/Br.logo.png" alt="Br.logo.png" width="50x">
+                <img src="Inhoud/Br.logo.png" alt="logo footer" width="50x">
             </a>
-        </div>
+        </address>
         <ul class="nav col-md-4 flex-row-reverse d-flex ">
             <li class="me-5"><a class="text-light bi bi-twitter-x fs-2 " href="#"><svg class="" width="24" height="24">
                         <use xlink:href="#twitter"></use>
