@@ -1,169 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link class="" rel="icon" href="img/favicon.ico">
-    <title>SignUp</title>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <!-- JavaScript: Bootstrap Bundle with Popper -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <!-- own CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/nav.js" defer></script>
-</head>
-<body>
-    <section id="picture" style="background-image: url('img/fred-banner-5.png');">
-        <!-- Navigation bar using Bootstrap classes -->
-        <nav class="navbar navbar-expand-lg navcolor fixed-top ">
-            <!-- Brand/logo on the left side -->
-            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo nav"></a>
-            <!-- Collapsible wrapper for responsive design -->
-            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse"
-                data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon fs-1"></span>
-            </button>
-            <!-- Collapsible content for navigation links -->
-            <section class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
-                <!-- Centered navigation links -->
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-light fs-3" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light fs-3" href="summary.html">Summary</a>
-                    </li>
-                    <!-- Dropdown for "Who'sFred?" -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light fs-3" href="whofred.html"
-                            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Who'sFred?</a>
-                        <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li>
-                                <a class="dropdown-item text-light" href="whotony.html">Who'sTony?</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- Dropdown for "Performances" -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light fs-3" href="Performances.html"
-                            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Performances</a>
-                        <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item text-light" href="BoilerRoom.html">BoilerRoom</a></li>
-                            <li><a class="dropdown-item text-light" href="Coachella.html">Coachella</a></li>
-                            <li><a class="dropdown-item text-light" href="Werchter.html">Werchter</a></li>
-                        </ul>
-                    </li>
-                    <!-- Regular navigation link -->
-                    <li class="nav-item"><a class="nav-link text-light fs-3 active" href="SignUp.html">SignUp</a></li>
-                    <li class="nav-item"><a class="nav-link text-light fs-3 " href="contact.html">Contact</a></li>
-                </ul>
-                <form class="form-inline mx-4 my-lg-0 ml-auto">
-                    <input class="form-inline mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+    <head>
+        <link class rel="icon" href="img/favicon.ico">
+        <title>SignUp</title>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+        <!-- JavaScript: Bootstrap Bundle with Popper -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <!-- own CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/nav.js" defer></script>
+    </head>
+    <body>
+        <section id="picture"
+            style="background-image: url('img/fred-banner-5.png');">
+            <!-- Navigation bar using Bootstrap classes -->
+            <nav class="navbar navbar-expand-lg navcolor fixed-top ">
+                <!-- Brand/logo on the left side -->
+                <a class="navbar-brand" href="index.html"><img
+                        src="img/logo.png" alt="logo nav"></a>
+                <!-- Collapsible wrapper for responsive design -->
+                <button class="navbar-toggler navbar-dark" type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fs-1"></span>
+                </button>
+                <!-- Collapsible content for navigation links -->
+                <section
+                    class="collapse navbar-collapse justify-content-between"
+                    id="navbarTogglerDemo02">
+                    <!-- Centered navigation links -->
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-light fs-3"
+                                aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light fs-3"
+                                href="summary.html">Summary</a>
+                        </li>
+                        <!-- Dropdown for "Who'sFred?" -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light fs-3"
+                                href="whofred.html"
+                                id="navbarDarkDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">Who'sFred?</a>
+                            <ul class="dropdown-menu transparentbar"
+                                aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item text-light"
+                                        href="whotony.html">Who'sTony?</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Dropdown for "Performances" -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light fs-3"
+                                href="Performances.html"
+                                id="navbarDarkDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">Performances</a>
+                            <ul class="dropdown-menu transparentbar"
+                                aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li><a class="dropdown-item text-light"
+                                        href="BoilerRoom.html">BoilerRoom</a></li>
+                                <li><a class="dropdown-item text-light"
+                                        href="Coachella.html">Coachella</a></li>
+                                <li><a class="dropdown-item text-light"
+                                        href="Werchter.html">Werchter</a></li>
+                            </ul>
+                        </li>
+                        <!-- Regular navigation link -->
+                        <li class="nav-item"><a
+                                class="nav-link text-light fs-3 active"
+                                href="SignUp.html">SignUp</a></li>
+                        <li class="nav-item"><a
+                                class="nav-link text-light fs-3 "
+                                href="contact.html">Contact</a></li>
+                    </ul>
+                    <form class="form-inline mx-4 my-lg-0 ml-auto">
+                        <input class="form-inline mr-sm-2" type="search"
+                            placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light my-2 my-sm-0"
+                            type="submit">Search</button>
+                    </form>
+                </section>
+                <!-- Search form outside of the collapsible area -->
+            </nav>
+        </section>
+        <main class="border-top">
+            <section class="container-xl text-light ">
+                <article class="col-12 mb-3">
+                    <!-- Section heading -->
+                    <h2 class="text-uppercase fs-4 fw-bolder pt-3">SignUp</h2>
+                    <!-- Section description -->
+                    <p>fill in the form to get updates <br> and to get a monthly
+                        newsletter</p>
+                </article>
+                <hr>
+                <!-- SignUp Form -->
+                <form action="#" method="post">
+                    <!-- Personal Information Section -->
+                    <fieldset class="row g-3 mb-3 ">
+                        <!-- Personal Information Section Legend -->
+                        <legend
+                            class="text-uppercase fs-6 fw-bolder pt-3">personal</legend>
+                        <!-- First Name Input Field -->
+                        <div class="col-md-6 ">
+                            <label for="firstName" class="form-label ">first
+                                name <span>*</span></label>
+                            <input type="text" class="form-control"
+                                id="firstName" required>
+                        </div>
+                        <!-- Last Name Input Field -->
+                        <div class="col-md-6">
+                            <label for="lastName" class="form-label">last name
+                                <span>*</span></label>
+                            <input type="text" class="form-control"
+                                id="lastName" required>
+                        </div>
+                        <!-- Mobile Number Input Field -->
+                        <div class="col">
+                            <label for="mobile" class="form-label">phone
+                                number</label>
+                            <input type="tel" class="form-control" id="mobile"
+                                pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{2}"
+                                placeholder="0412 34 56 78">
+                        </div>
+                        <!-- Date of Birth Input Field -->
+                        <div class="col">
+                            <label for="birthDate" class="form-label">date of
+                                birth</label>
+                            <input type="date" class="form-control"
+                                id="birthDate">
+                        </div>
+                    </fieldset>
+                    <!-- Account Information Section -->
+                    <fieldset class="row g-3 mb-3 mt-3">
+                        <!-- Account Information Section Legend -->
+                        <legend
+                            class="text-uppercase fs-6 fw-bolder pt-3">account</legend>
+                        <!-- Email Input Field -->
+                        <div class="col-12">
+                            <label for="mail" class="form-label">e-mail
+                                <span>*</span></label>
+                            <input type="email" class="form-control" id="mail"
+                                required>
+                        </div>
+                        <!-- Password Input Fields -->
+                        <div class="col-md-6">
+                            <label for="password1" class="form-label">password
+                                <span>*</span></label>
+                            <input type="password" class="form-control"
+                                id="password1"
+                                placeholder="min 8 karakters,1 cijfer, 1 hoofdletter"
+                                required>
+                        </div>
+                        <!-- Confirm Password Input Field -->
+                        <div class="col-md-6">
+                            <label for="password2" class="form-label">confirm
+                                password <span>*</span></label>
+                            <input type="password" class="form-control"
+                                id="password2" required>
+                        </div>
+                    </fieldset>
+                    <!-- Form Submission Button -->
+                    <div class="col-12">
+                        <button type="submit"
+                            class="btn btn-primary">send</button>
+                    </div>
                 </form>
             </section>
-            <!-- Search form outside of the collapsible area -->
-        </nav>
-    </section>
-    <main class="border-top">
-        <section class="container-xl text-light ">
-            <article class="col-12 mb-3">
-                <!-- Section heading -->
-                <h2 class="text-uppercase fs-4 fw-bolder pt-3">SignUp</h2>
-                <!-- Section description -->
-                <p>fill in the form to get updates <br> and to get a monthly newsletter</p>
-            </article>
-            <hr>
-            <!-- SignUp Form -->
-            <form action="#" method="post">
-                <!-- Personal Information Section -->
-                <fieldset class="row g-3 mb-3 ">
-                    <!-- Personal Information Section Legend -->
-                    <legend class="text-uppercase fs-6 fw-bolder pt-3">personal</legend>
-                    <!-- First Name Input Field -->
-                    <div class="col-md-6 ">
-                        <label for="firstName" class="form-label ">first name <span>*</span></label>
-                        <input type="text" class="form-control" id="firstName" required="">
-                    </div>
-                    <!-- Last Name Input Field -->
-                    <div class="col-md-6">
-                        <label for="lastName" class="form-label">last name <span>*</span></label>
-                        <input type="text" class="form-control" id="lastName" required="">
-                    </div>
-                    <!-- Mobile Number Input Field -->
-                    <div class="col">
-                        <label for="mobile" class="form-label">phone number</label>
-                        <input type="tel" class="form-control" id="mobile" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{2}"
-                            placeholder="0412 34 56 78">
-                    </div>
-                    <!-- Date of Birth Input Field -->
-                    <div class="col">
-                        <label for="birthDate" class="form-label">date of birth</label>
-                        <input type="date" class="form-control" id="birthDate">
-                    </div>
-                </fieldset>
-                <!-- Account Information Section -->
-                <fieldset class="row g-3 mb-3 mt-3">
-                    <!-- Account Information Section Legend -->
-                    <legend class="text-uppercase fs-6 fw-bolder pt-3">account</legend>
-                    <!-- Email Input Field -->
-                    <div class="col-12">
-                        <label for="mail" class="form-label">e-mail <span>*</span></label>
-                        <input type="email" class="form-control" id="mail" required="">
-                    </div>
-                    <!-- Password Input Fields -->
-                    <div class="col-md-6">
-                        <label for="password1" class="form-label">password <span>*</span></label>
-                        <input type="password" class="form-control" id="password1"
-                            placeholder="min 8 karakters,1 cijfer, 1 hoofdletter" required="">
-                    </div>
-                    <!-- Confirm Password Input Field -->
-                    <div class="col-md-6">
-                        <label for="password2" class="form-label">confirm password <span>*</span></label>
-                        <input type="password" class="form-control" id="password2" required="">
-                    </div>
-                </fieldset>
-                <!-- Form Submission Button -->
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary">send</button>
-                </div>
-            </form>
-        </section>
-    </main>
-    <footer class="d-flex flex-wrap justify-content-between align-items-center  my-4 border-top ">
-        <address href="contact.html" class="col-md-4 d-flex align-items-center">
-            <span class="ms-5 mb-md-0 text-light text-center fs-5">made by</span>
-            <a href="contact.html">
-                <img src="img/br-logo.png" alt="logo footer" width="50x">
-            </a>
-        </address>
-        <ul class="nav col-md-4 flex-row-reverse d-flex ">
-            <li class="me-5"><a class="text-light bi bi-twitter-x fs-2 " href="https://twitter.com/fredagainagain1" target=”_blank”><svg class="" width="24" height="24">
-                        <use xlink:href="#twitter"></use>
-                    </svg></a></li>
-            <li class=""><a class="text-light bi bi-instagram fs-2" href="https://www.instagram.com/fredagainagainagainagainagain/" target=”_blank”><svg class="" width="24" height="24">
-                        <use xlink:href="#instagram"></use>
-                    </svg></a></li>
-            <li class=""><a class="text-light bi bi-facebook fs-2 " href="https://www.facebook.com/fredagainagain" target=”_blank”><svg class="" width="24" height="24">
-                        <use xlink:href="#facebook"></use>
-                    </svg></a></li>
-        </ul>
+        </main>
+        <footer
+            class="d-flex flex-wrap justify-content-between align-items-center  my-4 border-top ">
+            <!-- Logo and attribution section -->
+            <address href="contact.html"
+                class="col-md-4 d-flex align-items-center">
+                <span class="ms-5 mb-md-0 text-light text-center fs-5">made
+                    by</span>
+                <a href="contact.html">
+                    <img src="img/br-logo.png" alt="banner logo" width="50x">
+                </a>
+            </address>
+            <!-- Social media links -->
+            <ul class="nav col-md-4 flex-row-reverse d-flex ">
+                <!-- Twitter icon and link -->
+                <li class="me-5">
+                    <a class="text-light bi bi-twitter-x fs-2 "
+                        href="https://twitter.com/fredagainagain1"
+                        target="_blank">
+                        <svg class width="24" height="24">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <!-- Instagram icon and link -->
+                <li class>
+                    <a class="text-light bi bi-instagram fs-2"
+                        href="https://www.instagram.com/fredagainagainagainagainagain/"
+                        target="_blank">
+                        <svg class width="24" height="24">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <!-- Facebook icon and link -->
+                <li class>
+                    <a class="text-light bi bi-facebook fs-2 "
+                        href="https://www.facebook.com/fredagainagain"
+                        target="_blank">
+                        <svg class width="24" height="24">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
         </footer>
+
     </body>
 </html>

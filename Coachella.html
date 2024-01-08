@@ -1,364 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link class="" rel="icon" href="img/favicon.ico">
-    <title>coachella</title>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <!-- JavaScript: Bootstrap Bundle with Popper -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <!-- own CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mapStyle.css">
-    <script src="js/nav.js" defer></script>
-    <script src="js/map_coachella.js" defer></script>
-    <!-- voeg de leaflet.js javascript toe aan de pagina en check de integriteit ervan -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-</head>
-<body>
-    <section id="picture" style="background-image: url('img/coachellafront.jpg');" class="border-bottom">
-        <!-- Navigation bar using Bootstrap classes -->
-        <nav class="navbar navbar-expand-lg navcolor fixed-top ">
-            <!-- Brand/logo on the left side -->
-            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo nav"></a>
-            <!-- Collapsible wrapper for responsive design -->
-            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse"
-                data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon fs-1"></span>
-            </button>
-            <!-- Collapsible content for navigation links -->
-            <section class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
-                <!-- Centered navigation links -->
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link text-light fs-3" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light fs-3" href="summary.html">Summary</a>
-                    </li>
-                    <!-- Dropdown for "Who'sFred?" -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light fs-3" href="whofred.html"
-                            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Who'sFred?</a>
-                        <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li>
-                                <a class="dropdown-item text-light" href="whotony.html">Who'sTony?</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- Dropdown for "Performances" -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light fs-3" href="Performances.html"
-                            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">Performances</a>
-                        <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item text-light" href="BoilerRoom.html">BoilerRoom</a></li>
-                            <li><a class="dropdown-item text-light active" href="Coachella.html">Coachella</a></li>
-                            <li><a class="dropdown-item text-light" href="Werchter.html">Werchter</a></li>
-                        </ul>
-                    </li>
-                    <!-- Regular navigation link -->
-                    <li class="nav-item"><a class="nav-link text-light fs-3" href="SignUp.html">SignUp</a></li>
-                    <li class="nav-item"><a class="nav-link text-light fs-3" href="contact.html">Contact</a></li>
-                </ul>
-                <form class="form-inline mx-4 my-lg-0 ml-auto">
-                    <input class="form-inline mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </section>
-            <!-- Search form outside of the collapsible area -->
-        </nav>
-    </section>
-    <main class="container bgmain pb-3">
-        <section class="row text-light fs-4 m-4 pt-4">
-            <h1>Coachella: A Harmonious Blend of Music, Art, and Desert Magic</h1>
-            <p class="p-4">Coachella Valley Music and Arts Festival, a vibrant celebration of music, art, and culture
-                nestled in the breathtaking landscapes of the Colorado Desert in Indio, California. Commonly known as
-                Coachella, this annual extravaganza has evolved into one of the world's premier music festivals since
-                its inception in 1999. Beyond its star-studded lineup featuring diverse genres, Coachella is renowned
-                for its immersive art installations, captivating performances, and a unique atmosphere that transcends
-                the conventional music festival experience. Attendees from all walks of life gather to bask in the
-                desert sun, dance to the beats of chart-topping artists, and immerse themselves in an unparalleled
-                fusion of creativity and community. Coachella isn't just a festival; it's a cultural phenomenon that
-                continues to set the standard for modern music festivals worldwide.</p>
-            <article id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <figure class="carousel-item active">
-                        <img class="d-block w-100" src="img/carousel/coachella-carousel1.jpg" alt="coachella-carousel1.jpg">
-                    </figure>
-                    <figure class="carousel-item">
-                        <img class="d-block w-100" src="img/carousel/coachella-caroules2.jpeg" alt="coachella-caroules2.jpeg">
-                    </figure>
-                    <figure class="carousel-item">
-                        <img class="d-block w-100" src="img/carousel/coachella-carousel3.jpeg" alt="coachella-carousel3.jpeg">
-                    </figure>
-                </div>
-            </article>
-            <p class="mt-3">Under the scorching sun of the Southern California desert, Coachella unfolds as a
-                kaleidoscope of sounds and sights, offering an unparalleled sensory feast. The festival's stages host a
-                diverse array of musical genres, from indie and rock to electronic and hip-hop, ensuring there's
-                something for every music enthusiast. Yet, Coachella is not only about the headlining acts; it's an
-                immersive journey through colossal art installations that transform the desert landscape into a surreal
-                playground of creativity. As the sun dips below the horizon, the festival comes to life in a blaze of
-                neon lights, creating an otherworldly atmosphere that invites attendees to lose themselves in the rhythm
-                of the night. Coachella is more than just a music festival; it's a transformative experience that leaves
-                an indelible mark on the hearts of those fortunate enough to partake in its annual spectacle.</p>
-            <h1 class="mb-5 mt-3">Fred Again.. at Coachella</h1>
-
+    <head>
+        <link class rel="icon" href="img/favicon.ico">
+        <title>coachella</title>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+        <!-- JavaScript: Bootstrap Bundle with Popper -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <!-- own CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/mapStyle.css">
+        <script src="js/nav.js" defer></script>
+        <script src="js/map_coachella.js" defer></script>
+        <!-- voeg de leaflet.js javascript toe aan de pagina en check de integriteit ervan -->
+        <link rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin></script>
+    </head>
+    <body>
+        <section id="picture"
+            style="background-image: url('img/coachellafront.jpg');"
+            class="border-bottom">
+            <!-- Navigation bar using Bootstrap classes -->
+            <nav class="navbar navbar-expand-lg navcolor fixed-top ">
+                <!-- Brand/logo on the left side -->
+                <a class="navbar-brand" href="index.html"><img
+                        src="img/logo.png" alt="logo nav"></a>
+                <!-- Collapsible wrapper for responsive design -->
+                <button class="navbar-toggler navbar-dark" type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fs-1"></span>
+                </button>
+                <!-- Collapsible content for navigation links -->
+                <section
+                    class="collapse navbar-collapse justify-content-between"
+                    id="navbarTogglerDemo02">
+                    <!-- Centered navigation links -->
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-light fs-3"
+                                aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light fs-3"
+                                href="summary.html">Summary</a>
+                        </li>
+                        <!-- Dropdown for "Who'sFred?" -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light fs-3"
+                                href="whofred.html"
+                                id="navbarDarkDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">Who'sFred?</a>
+                            <ul class="dropdown-menu transparentbar"
+                                aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li>
+                                    <a class="dropdown-item text-light"
+                                        href="whotony.html">Who'sTony?</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Dropdown for "Performances" -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light fs-3"
+                                href="Performances.html"
+                                id="navbarDarkDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">Performances</a>
+                            <ul class="dropdown-menu transparentbar"
+                                aria-labelledby="navbarDarkDropdownMenuLink">
+                                <li><a class="dropdown-item text-light"
+                                        href="BoilerRoom.html">BoilerRoom</a></li>
+                                <li><a class="dropdown-item text-light active"
+                                        href="Coachella.html">Coachella</a></li>
+                                <li><a class="dropdown-item text-light"
+                                        href="Werchter.html">Werchter</a></li>
+                            </ul>
+                        </li>
+                        <!-- Regular navigation link -->
+                        <li class="nav-item"><a class="nav-link text-light fs-3"
+                                href="SignUp.html">SignUp</a></li>
+                        <li class="nav-item"><a class="nav-link text-light fs-3"
+                                href="contact.html">Contact</a></li>
+                    </ul>
+                    <form class="form-inline mx-4 my-lg-0 ml-auto">
+                        <input class="form-inline mr-sm-2" type="search"
+                            placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light my-2 my-sm-0"
+                            type="submit">Search</button>
+                    </form>
+                </section>
+                <!-- Search form outside of the collapsible area -->
+            </nav>
+        </section>
+        <!-- Main container with background color and bottom padding -->
+        <main class="container bgmain pb-3">
+            <!-- Row section with light text, font size 4, margin, and padding at the top -->
+            <section class="row text-light fs-4 m-4 pt-4">
+                <!-- Heading with level 1 and a margin at the bottom -->
+                <h1>Coachella: A Harmonious Blend of Music, Art, and Desert
+                    Magic</h1>
+                <!-- Paragraph with padding, providing information about Coachella -->
+                <p class="p-4">Coachella Valley Music and Arts Festival, a
+                    vibrant celebration of music, art, and culture
+                    nestled in the breathtaking landscapes of the Colorado
+                    Desert in Indio, California. Commonly known as
+                    Coachella, this annual extravaganza has evolved into one of
+                    the world's premier music festivals since
+                    its inception in 1999. Beyond its star-studded lineup
+                    featuring diverse genres, Coachella is renowned
+                    for its immersive art installations, captivating
+                    performances, and a unique atmosphere that transcends
+                    the conventional music festival experience. Attendees from
+                    all walks of life gather to bask in the
+                    desert sun, dance to the beats of chart-topping artists, and
+                    immerse themselves in an unparalleled
+                    fusion of creativity and community. Coachella isn't just a
+                    festival; it's a cultural phenomenon that
+                    continues to set the standard for modern music festivals
+                    worldwide.</p>
+                <!-- Article with carousel for images -->
+                <article id="carouselExampleSlidesOnly" class="carousel slide"
+                    data-ride="carousel">
+                    <div class="carousel-inner">
+                        <figure class="carousel-item active">
+                            <img class="d-block w-100"
+                                src="img/carousel/coachella-carousel1.jpg"
+                                alt="coachella-carousel1.jpg">
+                        </figure>
+                        <figure class="carousel-item">
+                            <img class="d-block w-100"
+                                src="img/carousel/coachella-caroules2.jpeg"
+                                alt="coachella-caroules2.jpeg">
+                        </figure>
+                        <figure class="carousel-item">
+                            <img class="d-block w-100"
+                                src="img/carousel/coachella-carousel3.jpeg"
+                                alt="coachella-carousel3.jpeg">
+                        </figure>
+                    </div>
+                </article>
+                <!-- Paragraph with additional information about Coachella -->
+                <p class="mt-3">Under the scorching sun of the Southern
+                    California desert, Coachella unfolds as a
+                    kaleidoscope of sounds and sights, offering an unparalleled
+                    sensory feast. The festival's stages host a
+                    diverse array of musical genres, from indie and rock to
+                    electronic and hip-hop, ensuring there's
+                    something for every music enthusiast. Yet, Coachella is not
+                    only about the headlining acts; it's an
+                    immersive journey through colossal art installations that
+                    transform the desert landscape into a surreal
+                    playground of creativity. As the sun dips below the horizon,
+                    the festival comes to life in a blaze of
+                    neon lights, creating an otherworldly atmosphere that
+                    invites attendees to lose themselves in the rhythm
+                    of the night. Coachella is more than just a music festival;
+                    it's a transformative experience that leaves
+                    an indelible mark on the hearts of those fortunate enough to
+                    partake in its annual spectacle.</p>
+                <!-- Heading with level 1 and margin at the bottom and top -->
+                <h1 class="mb-5 mt-3">Fred Again.. at Coachella</h1>
+                <!-- Section with aspect ratio and margin at the top -->
                 <section class="ratio ratio-16x9 mt-4">
-                    <iframe src="https://www.youtube.com/embed/dFfC92iBxNw" title="Four Tet x Fred again.. x Skrillex - Coachella 2023 - FULL SET **OFFICIAL**" style="max-width: 100%;height: 100%;" allowfullscreen></iframe>
-                    </section>
+                    <!-- Embedded YouTube video with a responsive layout -->
+                    <iframe src="https://www.youtube.com/embed/dFfC92iBxNw"
+                        title="Four Tet x Fred again.. x Skrillex - Coachella 2023 - FULL SET **OFFICIAL**"
+                        style="max-width: 100%;height: 100%;"
+                        allowfullscreen></iframe>
+                </section>
 
-                
-            <table class="table table-dark mt-4 mb-4 fs-5">
-                <thead>
-                    <tr>
-                        <th>Song</th>
-                        <th>Info</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Rumble</td>
-                        <td>(Skrillex song) - Acapella intro</td>
-                    </tr>
-                    <tr>
-                        <td>Leave Me Like This</td>
-                        <td>(Skrillex cover) - VIP, contains elements of "Baby again.." by Skrillex & Fred again.. &
-                            Four Tet, "Baby" by Four Tet</td>
-                    </tr>
-                    <tr>
-                        <td>Danielle (smile on my face)</td>
-                        <td>(Fred again.. cover)</td>
-                    </tr>
-                    <tr>
-                        <td>Country Riddim</td>
-                        <td>(HOL! cover) - 'Smells Like Teen Spirit' intro, contains elements of "Xena" by Skrillex</td>
-                    </tr>
-                    <tr>
-                        <td>Inhale Exhale</td>
-                        <td>(Skrillex cover) - Mixed with Princess Diana by Ice Spice's</td>
-                    </tr>
-                    <tr>
-                        <td>Rumble</td>
-                        <td>(Skrillex cover)</td>
-                    </tr>
-                    <tr>
-                        <td>Never Let You Go</td>
-                        <td>(Sammy Virji cover) - Contains elements of "Call Me Maybe" by Carly Rae Jepsen</td>
-                    </tr>
-                    <tr>
-                        <td>Push Pull</td>
-                        <td>(OFFAIAH cover) - Contains element of unknown song</td>
-                    </tr>
-                    <tr>
-                        <td>It's a Fine Day</td>
-                        <td>(Opus III cover) - Skrillex & Boys Noize remix</td>
-                    </tr>
-                    <tr>
-                        <td>Renegade Master</td>
-                        <td>(Wildchild cover) - SAKA Bootleg</td>
-                    </tr>
-                    <tr>
-                        <td>Tears</td>
-                        <td>(Skrillex cover)</td>
-                    </tr>
-                    <tr>
-                        <td>Strong</td>
-                        <td>(Romy cover)</td>
-                    </tr>
-                    <tr>
-                        <td>Baby again..</td>
-                        <td>Mixed with Rumble</td>
-                    </tr>
-                    <tr>
-                        <td>Love Story</td>
-                        <td>(Taylor Swift cover) - KH Edit</td>
-                    </tr>
-                    <tr>
-                        <td>Jungle</td>
-                        <td>(Fred again.. cover)</td>
-                    </tr>
-                    <tr>
-                        <td>In The Yuma</td>
-                        <td>(Chris Lake cover) - Four Tet Remix</td>
-                    </tr>
-                    <tr>
-                        <td>Turn On the Lights again..</td>
-                        <td>(Fred again.. cover)</td>
-                    </tr>
-                    <tr>
-                        <td>RATATA</td>
-                        <td>(Skrillex cover)</td>
-                    </tr>
-                    <tr>
-                        <td>Losing It / Country Riddim</td>
-                        <td>With "Baby Again" intro</td>
-                    </tr>
-                    <tr>
-                        <td>XENA</td>
-                        <td>(Skrillex cover)</td>
-                    </tr>
-                    <tr>
-                        <td>Marea (We’ve Lost Dancing)</td>
-                        <td>(Fred again.. & The Blessed Madonna cover) - Remixed</td>
-                    </tr>
-                    <tr>
-                        <td>Delilah (pull me out of this)</td>
-                        <td>(Fred again.. cover)</td>
-                    </tr>
-                    <tr>
-                        <td>Party in the U.S.A.</td>
-                        <td>(Miley Cyrus cover)</td>
-                    </tr>
-                    <tr>
-                        <td>I Miss You</td>
-                        <td>(blink‐182 cover)</td>
-                    </tr>
-                    <tr>
-                        <td>Leave Me Like This / Danielle (smile on my face) / Teenage Birdsong / Baby</td>
-                        <td>Skrillex, Four Tet and Fred Again.. covers, drum'n'bass remix, contains elements of Cinema
-                            by Benni</td>
-                    </tr>
-                </tbody>
-            </table>
-            <h1 class="mb-5 border-top pt-4">Location: Coachella</h1>
-            <section id="map"
-                class="row leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
-                style="position: relative;" tabindex="0">
-                <div id="apMap"></div>
-                <div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);">
-                    <div class="leaflet-pane leaflet-tile-pane">
-                        <div class="leaflet-layer " style="z-index: 1; opacity: 1;">
-                            <div class="leaflet-tile-container leaflet-zoom-animated"
-                                style="z-index: 17; transform: translate3d(-9px, 2px, 0px) scale(1);"><img alt=""
-                                    src="https://tile.openstreetmap.org/17/67143/43746.png"
-                                    class="leaflet-tile leaflet-tile-loaded"
-                                    style="width: 256px; height: 256px; transform: translate3d(192px, 130px, 0px); opacity: 1;"><img
-                                    alt="" src="https://tile.openstreetmap.org/17/67144/43746.png"
-                                    class="leaflet-tile leaflet-tile-loaded"
-                                    style="width: 256px; height: 256px; transform: translate3d(448px, 130px, 0px); opacity: 1;"><img
-                                    alt="" src="https://tile.openstreetmap.org/17/67143/43745.png"
-                                    class="leaflet-tile leaflet-tile-loaded"
-                                    style="width: 256px; height: 256px; transform: translate3d(192px, -126px, 0px); opacity: 1;"><img
-                                    alt="" src="https://tile.openstreetmap.org/17/67144/43745.png"
-                                    class="leaflet-tile leaflet-tile-loaded"
-                                    style="width: 256px; height: 256px; transform: translate3d(448px, -126px, 0px); opacity: 1;"><img
-                                    alt="" src="https://tile.openstreetmap.org/17/67143/43747.png"
-                                    class="leaflet-tile leaflet-tile-loaded"
-                                    style="width: 256px; height: 256px; transform: translate3d(192px, 386px, 0px); opacity: 1;"><img
-                                    alt="" src="https://tile.openstreetmap.org/17/67144/43747.png"
-                                    class="leaflet-tile leaflet-tile-loaded"
-                                    style="width: 256px; height: 256px; transform: translate3d(448px, 386px, 0px); opacity: 1;"><img
-                                    alt="" src="https://tile.openstreetmap.org/17/67142/43746.png"
-                                    class="leaflet-tile leaflet-tile-loaded"
-                                    style="width: 256px; height: 256px; transform: translate3d(-64px, 130px, 0px); opacity: 1;"><img
-                                    alt="" src="https://tile.openstreetmap.org/17/67145/43746.png"
-                                    class="leaflet-tile leaflet-tile-loaded"
-                                    style="width: 256px; height: 256px; transform: translate3d(704px, 130px, 0px); opacity: 1;"><img
-                                    alt="" src="https://tile.openstreetmap.org/17/67142/43745.png"
-                                    class="leaflet-tile leaflet-tile-loaded"
-                                    style="width: 256px; height: 256px; transform: translate3d(-64px, -126px, 0px); opacity: 1;"><img
-                                    alt="" src="https://tile.openstreetmap.org/17/67145/43745.png"
-                                    class="leaflet-tile leaflet-tile-loaded"
-                                    style="width: 256px; height: 256px; transform: translate3d(704px, -126px, 0px); opacity: 1;"><img
-                                    alt="" src="https://tile.openstreetmap.org/17/67142/43747.png"
-                                    class="leaflet-tile leaflet-tile-loaded"
-                                    style="width: 256px; height: 256px; transform: translate3d(-64px, 386px, 0px); opacity: 1;"><img
-                                    alt="" src="https://tile.openstreetmap.org/17/67145/43747.png"
-                                    class="leaflet-tile leaflet-tile-loaded"
-                                    style="width: 256px; height: 256px; transform: translate3d(704px, 386px, 0px); opacity: 1;">
+                <!-- Table with dark background, margin at the top and bottom, and font size 5 -->
+                <table class="table table-dark mt-4 mb-4 fs-5">
+                    <!-- Table header with two columns -->
+                    <thead>
+                        <tr>
+                            <th>Song</th>
+                            <th>Info</th>
+                        </tr>
+                    </thead>
+                    <!-- Table body with multiple rows of song information -->
+                    <tbody>
+                        <tr>
+                            <td>Rumble</td>
+                            <td>(Skrillex song) - Acapella intro</td>
+                        </tr>
+                        <tr>
+                            <td>Leave Me Like This</td>
+                            <td>(Skrillex cover) - VIP, contains elements of
+                                "Baby again.." by Skrillex & Fred again.. &
+                                Four Tet, "Baby" by Four Tet</td>
+                        </tr>
+                        <tr>
+                            <td>Danielle (smile on my face)</td>
+                            <td>(Fred again.. cover)</td>
+                        </tr>
+                        <tr>
+                            <td>Country Riddim</td>
+                            <td>(HOL! cover) - 'Smells Like Teen Spirit' intro,
+                                contains elements of "Xena" by Skrillex</td>
+                        </tr>
+                        <tr>
+                            <td>Inhale Exhale</td>
+                            <td>(Skrillex cover) - Mixed with Princess Diana by
+                                Ice Spice's</td>
+                        </tr>
+                        <tr>
+                            <td>Rumble</td>
+                            <td>(Skrillex cover)</td>
+                        </tr>
+                        <tr>
+                            <td>Never Let You Go</td>
+                            <td>(Sammy Virji cover) - Contains elements of
+                                "Call Me Maybe" by Carly Rae Jepsen</td>
+                        </tr>
+                        <tr>
+                            <td>Push Pull</td>
+                            <td>(OFFAIAH cover) - Contains element of unknown
+                                song</td>
+                        </tr>
+                        <tr>
+                            <td>It's a Fine Day</td>
+                            <td>(Opus III cover) - Skrillex & Boys Noize
+                                remix</td>
+                        </tr>
+                        <tr>
+                            <td>Renegade Master</td>
+                            <td>(Wildchild cover) - SAKA Bootleg</td>
+                        </tr>
+                        <tr>
+                            <td>Tears</td>
+                            <td>(Skrillex cover)</td>
+                        </tr>
+                        <tr>
+                            <td>Strong</td>
+                            <td>(Romy cover)</td>
+                        </tr>
+                        <tr>
+                            <td>Baby again..</td>
+                            <td>Mixed with Rumble</td>
+                        </tr>
+                        <tr>
+                            <td>Love Story</td>
+                            <td>(Taylor Swift cover) - KH Edit</td>
+                        </tr>
+                        <tr>
+                            <td>Jungle</td>
+                            <td>(Fred again.. cover)</td>
+                        </tr>
+                        <tr>
+                            <td>In The Yuma</td>
+                            <td>(Chris Lake cover) - Four Tet Remix</td>
+                        </tr>
+                        <tr>
+                            <td>Turn On the Lights again..</td>
+                            <td>(Fred again.. cover)</td>
+                        </tr>
+                        <tr>
+                            <td>RATATA</td>
+                            <td>(Skrillex cover)</td>
+                        </tr>
+                        <tr>
+                            <td>Losing It / Country Riddim</td>
+                            <td>With "Baby Again" intro</td>
+                        </tr>
+                        <tr>
+                            <td>XENA</td>
+                            <td>(Skrillex cover)</td>
+                        </tr>
+                        <tr>
+                            <td>Marea (We’ve Lost Dancing)</td>
+                            <td>(Fred again.. & The Blessed Madonna cover) -
+                                Remixed</td>
+                        </tr>
+                        <tr>
+                            <td>Delilah (pull me out of this)</td>
+                            <td>(Fred again.. cover)</td>
+                        </tr>
+                        <tr>
+                            <td>Party in the U.S.A.</td>
+                            <td>(Miley Cyrus cover)</td>
+                        </tr>
+                        <tr>
+                            <td>I Miss You</td>
+                            <td>(blink‐182 cover)</td>
+                        </tr>
+                        <tr>
+                            <td>Leave Me Like This / Danielle (smile on my face)
+                                / Teenage Birdsong / Baby</td>
+                            <td>Skrillex, Four Tet and Fred Again.. covers,
+                                drum'n'bass remix, contains elements of Cinema
+                                by Benni</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Heading with level 1, margin bottom, border top, and padding top -->
+                <h1 class="mb-5 border-top pt-4">Location: Coachella</h1>
+                <!-- Section with an Leaflet -->
+                <section id="map"
+                    class="row leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom"
+                    style="position: relative;" tabindex="0">
+                    <div id="apMap"></div>
+                    <div class="leaflet-pane leaflet-map-pane"
+                        style="transform: translate3d(0px, 0px, 0px);">
+                        <div class="leaflet-pane leaflet-tile-pane">
+                            <div class="leaflet-layer "
+                                style="z-index: 1; opacity: 1;">
+                                <div
+                                    class="leaflet-tile-container leaflet-zoom-animated"
+                                    style="z-index: 17; transform: translate3d(-9px, 2px, 0px) scale(1);"><img
+                                        alt
+                                        src="https://tile.openstreetmap.org/17/67143/43746.png"
+                                        class="leaflet-tile leaflet-tile-loaded"
+                                        style="width: 256px; height: 256px; transform: translate3d(192px, 130px, 0px); opacity: 1;"><img
+                                        alt
+                                        src="https://tile.openstreetmap.org/17/67144/43746.png"
+                                        class="leaflet-tile leaflet-tile-loaded"
+                                        style="width: 256px; height: 256px; transform: translate3d(448px, 130px, 0px); opacity: 1;"><img
+                                        alt
+                                        src="https://tile.openstreetmap.org/17/67143/43745.png"
+                                        class="leaflet-tile leaflet-tile-loaded"
+                                        style="width: 256px; height: 256px; transform: translate3d(192px, -126px, 0px); opacity: 1;"><img
+                                        alt
+                                        src="https://tile.openstreetmap.org/17/67144/43745.png"
+                                        class="leaflet-tile leaflet-tile-loaded"
+                                        style="width: 256px; height: 256px; transform: translate3d(448px, -126px, 0px); opacity: 1;"><img
+                                        alt
+                                        src="https://tile.openstreetmap.org/17/67143/43747.png"
+                                        class="leaflet-tile leaflet-tile-loaded"
+                                        style="width: 256px; height: 256px; transform: translate3d(192px, 386px, 0px); opacity: 1;"><img
+                                        alt
+                                        src="https://tile.openstreetmap.org/17/67144/43747.png"
+                                        class="leaflet-tile leaflet-tile-loaded"
+                                        style="width: 256px; height: 256px; transform: translate3d(448px, 386px, 0px); opacity: 1;"><img
+                                        alt
+                                        src="https://tile.openstreetmap.org/17/67142/43746.png"
+                                        class="leaflet-tile leaflet-tile-loaded"
+                                        style="width: 256px; height: 256px; transform: translate3d(-64px, 130px, 0px); opacity: 1;"><img
+                                        alt
+                                        src="https://tile.openstreetmap.org/17/67145/43746.png"
+                                        class="leaflet-tile leaflet-tile-loaded"
+                                        style="width: 256px; height: 256px; transform: translate3d(704px, 130px, 0px); opacity: 1;"><img
+                                        alt
+                                        src="https://tile.openstreetmap.org/17/67142/43745.png"
+                                        class="leaflet-tile leaflet-tile-loaded"
+                                        style="width: 256px; height: 256px; transform: translate3d(-64px, -126px, 0px); opacity: 1;"><img
+                                        alt
+                                        src="https://tile.openstreetmap.org/17/67145/43745.png"
+                                        class="leaflet-tile leaflet-tile-loaded"
+                                        style="width: 256px; height: 256px; transform: translate3d(704px, -126px, 0px); opacity: 1;"><img
+                                        alt
+                                        src="https://tile.openstreetmap.org/17/67142/43747.png"
+                                        class="leaflet-tile leaflet-tile-loaded"
+                                        style="width: 256px; height: 256px; transform: translate3d(-64px, 386px, 0px); opacity: 1;"><img
+                                        alt
+                                        src="https://tile.openstreetmap.org/17/67145/43747.png"
+                                        class="leaflet-tile leaflet-tile-loaded"
+                                        style="width: 256px; height: 256px; transform: translate3d(704px, 386px, 0px); opacity: 1;">
+                                </div>
+                                <div
+                                    class="leaflet-tile-container leaflet-zoom-animated"
+                                    style="z-index: 15; transform: translate3d(-45px, -536px, 0px) scale(4);"></div>
                             </div>
-                            <div class="leaflet-tile-container leaflet-zoom-animated"
-                                style="z-index: 15; transform: translate3d(-45px, -536px, 0px) scale(4);"></div>
+                        </div>
+                        <div class="leaflet-pane leaflet-overlay-pane"><svg
+                                pointer-events="none"
+                                class="leaflet-zoom-animated" width="990"
+                                height="600"
+                                style="transform: translate3d(-82px, -50px, 0px);"
+                                viewBox="-82 -50 990 600">
+                                <g>
+                                    <path class="leaflet-interactive"
+                                        stroke="#ff7800" stroke-opacity="1"
+                                        stroke-width="1"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round" fill="#ff7800"
+                                        fill-opacity="0.2"
+                                        fill-rule="evenodd"
+                                        d="M345 289L345 215L462 215L462 289z"></path>
+                                </g>
+                            </svg></div>
+                        <div class="leaflet-pane leaflet-shadow-pane"><img
+                                src="https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png"
+                                class="leaflet-marker-shadow leaflet-zoom-animated"
+                                style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(407px, 263px, 0px);"
+                                alt></div>
+                        <div class="leaflet-pane leaflet-marker-pane"><img
+                                src="https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png"
+                                class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
+                                style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(407px, 263px, 0px); z-index: 263;"
+                                alt="Marker" tabindex="0" role="button"></div>
+                        <div class="leaflet-pane leaflet-tooltip-pane"></div>
+                        <div class="leaflet-pane leaflet-popup-pane"></div>
+                        <div class="leaflet-proxy leaflet-zoom-animated"
+                            style="transform: translate3d(17188800px, 11199100px, 0px) scale(65536);"></div>
+                    </div>
+                    <div class="leaflet-control-container">
+                        <div class="leaflet-top leaflet-left">
+                            <div
+                                class="leaflet-control-zoom leaflet-bar leaflet-control"><a
+                                    class="leaflet-control-zoom-in leaflet-disabled"
+                                    href="#" title="Zoom in" role="button"
+                                    aria-label="Zoom in"
+                                    aria-disabled="true"><span
+                                        aria-hidden="true">+</span></a><a
+                                    class="leaflet-control-zoom-out" href="#"
+                                    title="Zoom out" role="button"
+                                    aria-label="Zoom out"
+                                    aria-disabled="false"><span
+                                        aria-hidden="true">−</span></a></div>
+                        </div>
+                        <div class="leaflet-top leaflet-right"></div>
+                        <div class="leaflet-bottom leaflet-left"></div>
+                        <div class="leaflet-bottom leaflet-right">
+                            <div
+                                class="leaflet-control-attribution leaflet-control"><a
+                                    href="https://leafletjs.com"
+                                    title="A JavaScript library for interactive maps"><svg
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="12" height="8" viewBox="0 0 12 8"
+                                        class="leaflet-attribution-flag">
+                                        <path fill="#4C7BE1"
+                                            d="M0 0h12v4H0z"></path>
+                                        <path fill="#FFD500"
+                                            d="M0 4h12v3H0z"></path>
+                                        <path fill="#E0BC00"
+                                            d="M0 7h12v1H0z"></path>
+                                    </svg> Leaflet</a> <span
+                                    aria-hidden="true">|</span> © <a
+                                    href="http://www.openstreetmap.org/copyright">OpenStreetMap</a></div>
                         </div>
                     </div>
-                    <div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none"
-                            class="leaflet-zoom-animated" width="990" height="600"
-                            style="transform: translate3d(-82px, -50px, 0px);" viewBox="-82 -50 990 600">
-                            <g>
-                                <path class="leaflet-interactive" stroke="#ff7800" stroke-opacity="1" stroke-width="1"
-                                    stroke-linecap="round" stroke-linejoin="round" fill="#ff7800" fill-opacity="0.2"
-                                    fill-rule="evenodd" d="M345 289L345 215L462 215L462 289z"></path>
-                            </g>
-                        </svg></div>
-                    <div class="leaflet-pane leaflet-shadow-pane"><img
-                            src="https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png"
-                            class="leaflet-marker-shadow leaflet-zoom-animated"
-                            style="margin-left: -12px; margin-top: -41px; width: 41px; height: 41px; transform: translate3d(407px, 263px, 0px);"
-                            alt=""></div>
-                    <div class="leaflet-pane leaflet-marker-pane"><img
-                            src="https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png"
-                            class="leaflet-marker-icon leaflet-zoom-animated leaflet-interactive"
-                            style="margin-left: -12px; margin-top: -41px; width: 25px; height: 41px; transform: translate3d(407px, 263px, 0px); z-index: 263;"
-                            alt="Marker" tabindex="0" role="button"></div>
-                    <div class="leaflet-pane leaflet-tooltip-pane"></div>
-                    <div class="leaflet-pane leaflet-popup-pane"></div>
-                    <div class="leaflet-proxy leaflet-zoom-animated"
-                        style="transform: translate3d(17188800px, 11199100px, 0px) scale(65536);"></div>
-                </div>
-                <div class="leaflet-control-container">
-                    <div class="leaflet-top leaflet-left">
-                        <div class="leaflet-control-zoom leaflet-bar leaflet-control"><a
-                                class="leaflet-control-zoom-in leaflet-disabled" href="#" title="Zoom in" role="button"
-                                aria-label="Zoom in" aria-disabled="true"><span aria-hidden="true">+</span></a><a
-                                class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button"
-                                aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a></div>
-                    </div>
-                    <div class="leaflet-top leaflet-right"></div>
-                    <div class="leaflet-bottom leaflet-left"></div>
-                    <div class="leaflet-bottom leaflet-right">
-                        <div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com"
-                                title="A JavaScript library for interactive maps"><svg aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"
-                                    class="leaflet-attribution-flag">
-                                    <path fill="#4C7BE1" d="M0 0h12v4H0z"></path>
-                                    <path fill="#FFD500" d="M0 4h12v3H0z"></path>
-                                    <path fill="#E0BC00" d="M0 7h12v1H0z"></path>
-                                </svg> Leaflet</a> <span aria-hidden="true">|</span> © <a
-                                href="http://www.openstreetmap.org/copyright">OpenStreetMap</a></div>
-                    </div>
-                </div>
+                </section>
             </section>
-        </section>
-    </main>
-    <footer class="d-flex flex-wrap justify-content-between align-items-center  my-4 border-top ">
-        <address href="contact.html" class="col-md-4 d-flex align-items-center">
-            <span class="ms-5 mb-md-0 text-light text-center fs-5">made by</span>
-            <a href="contact.html">
-                <img src="img/br-logo.png" alt="logo footer" width="50x">
-            </a>
-        </address>
-        <ul class="nav col-md-4 flex-row-reverse d-flex ">
-            <li class="me-5"><a class="text-light bi bi-twitter-x fs-2 " href="https://twitter.com/fredagainagain1" target=”_blank”><svg class="" width="24" height="24">
-                        <use xlink:href="#twitter"></use>
-                    </svg></a></li>
-            <li class=""><a class="text-light bi bi-instagram fs-2" href="https://www.instagram.com/fredagainagainagainagainagain/" target=”_blank”><svg class="" width="24" height="24">
-                        <use xlink:href="#instagram"></use>
-                    </svg></a></li>
-            <li class=""><a class="text-light bi bi-facebook fs-2 " href="https://www.facebook.com/fredagainagain" target=”_blank”><svg class="" width="24" height="24">
-                        <use xlink:href="#facebook"></use>
-                    </svg></a></li>
-        </ul>
+        </main>
+        <footer
+            class="d-flex flex-wrap justify-content-between align-items-center  my-4 border-top ">
+            <!-- Logo and attribution section -->
+            <address href="contact.html"
+                class="col-md-4 d-flex align-items-center">
+                <span class="ms-5 mb-md-0 text-light text-center fs-5">made
+                    by</span>
+                <a href="contact.html">
+                    <img src="img/br-logo.png" alt="banner logo" width="50x">
+                </a>
+            </address>
+            <!-- Social media links -->
+            <ul class="nav col-md-4 flex-row-reverse d-flex ">
+                <!-- Twitter icon and link -->
+                <li class="me-5">
+                    <a class="text-light bi bi-twitter-x fs-2 "
+                        href="https://twitter.com/fredagainagain1"
+                        target="_blank">
+                        <svg class width="24" height="24">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <!-- Instagram icon and link -->
+                <li class>
+                    <a class="text-light bi bi-instagram fs-2"
+                        href="https://www.instagram.com/fredagainagainagainagainagain/"
+                        target="_blank">
+                        <svg class width="24" height="24">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <!-- Facebook icon and link -->
+                <li class>
+                    <a class="text-light bi bi-facebook fs-2 "
+                        href="https://www.facebook.com/fredagainagain"
+                        target="_blank">
+                        <svg class width="24" height="24">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
         </footer>
     </body>
 </html>

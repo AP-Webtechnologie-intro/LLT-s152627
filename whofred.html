@@ -1,261 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Favicon for the website -->
-  <link rel="icon" href="img/favicon.ico">
-  <!-- Title of the webpage -->
-  <title>Who's Fred?</title>
-  <!-- Required meta tags for responsive design -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-  <!-- JavaScript: Bootstrap Bundle with Popper -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <!-- Custom CSS styles -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- Custom JavaScript for navigation (defer attribute for asynchronous loading) -->
-  <script src="js/nav.js" defer></script>
-</head>
 
+  <head>
+    <!-- Favicon for the website -->
+    <link rel="icon" href="img/favicon.ico">
+    <!-- Title of the webpage -->
+    <title>Who's Fred?</title>
+    <!-- Required meta tags for responsive design -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <!-- JavaScript: Bootstrap Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+    <!-- Custom CSS styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Custom JavaScript for navigation (defer attribute for asynchronous loading) -->
+    <script src="js/nav.js" defer></script>
+  </head>
 
-<body>
-  <section id="picture" style="background-image: url('img/fred-banner-2.jpg');" class="border-bottom">
+  <body>
+    <section id="picture"
+      style="background-image: url('img/fred-banner-2.jpg');"
+      class="border-bottom">
+      <!-- Navigation Bar -->
+      <nav class="navbar navbar-expand-lg navcolor fixed-top">
+        <!-- Brand/logo on the left side -->
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png"
+            alt="logo nav"></a>
+        <!-- Collapsible wrapper for responsive design -->
+        <button class="navbar-toggler navbar-dark" type="button"
+          data-toggle="collapse" data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon fs-1"></span>
+        </button>
+        <!-- Collapsible content for navigation links -->
+        <section class="collapse navbar-collapse justify-content-between"
+          id="navbarTogglerDemo02">
+          <!-- Centered navigation links -->
+          <ul class="navbar-nav mx-auto">
+            <!-- Navigation Items -->
+            <li class="nav-item">
+              <a class="nav-link text-light fs-3" aria-current="page"
+                href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light fs-3"
+                href="summary.html">Summary</a>
+            </li>
+            <!-- Dropdown for "Who'sFred?" -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light fs-3 active"
+                href="whofred.html"
+                id="navbarDarkDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Who'sFred?</a>
+              <ul class="dropdown-menu transparentbar"
+                aria-labelledby="navbarDarkDropdownMenuLink">
+                <li>
+                  <a class="dropdown-item text-light"
+                    href="whotony.html">Who'sTony?</a>
+                </li>
+              </ul>
+            </li>
+            <!-- Dropdown for "Performances" -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light fs-3"
+                href="Performances.html"
+                id="navbarDarkDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Performances</a>
+              <ul class="dropdown-menu transparentbar"
+                aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item text-light"
+                    href="BoilerRoom.html">BoilerRoom</a></li>
+                <li><a class="dropdown-item text-light"
+                    href="Coachella.html">Coachella</a></li>
+                <li><a class="dropdown-item text-light"
+                    href="Werchter.html">Werchter</a></li>
+              </ul>
+            </li>
+            <!-- Regular navigation link -->
+            <li class="nav-item"><a class="nav-link text-light fs-3"
+                href="SignUp.html">SignUp</a></li>
+            <li class="nav-item"><a class="nav-link text-light fs-3"
+                href="contact.html">Contact</a></li>
+          </ul>
+          <!-- Search form -->
+          <form class="form-inline mx-4 my-lg-0 ml-auto">
+            <input class="form-inline mr-sm-2" type="search"
+              placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0"
+              type="submit">Search</button>
+          </form>
+        </section>
+        <!-- Search form outside of the collapsible area -->
+      </nav>
+    </section>
 
-
-    <nav class="navbar navbar-expand-lg navcolor fixed-top ">
-      <!-- Brand/logo on the left side -->
-      <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo nav"></a>
-      <!-- Collapsible wrapper for responsive design -->
-      <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon fs-1"></span>
-      </button>
-      <!-- Collapsible content for navigation links -->
-      <section class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
-        <!-- Centered navigation links -->
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link text-light fs-3" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light fs-3" href="summary.html">Summary</a>
-          </li>
-          <!-- Dropdown for "Who'sFred?" -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-light fs-3 active" href="whofred.html" id="navbarDarkDropdownMenuLink"
-              role="button" data-bs-toggle="dropdown" aria-expanded="false">Who'sFred?</a>
-            <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
-              <li>
-                <a class="dropdown-item text-light" href="whotony.html">Who'sTony?</a>
-              </li>
-            </ul>
-          </li>
-          <!-- Dropdown for "Performances" -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-light fs-3" href="Performances.html" id="navbarDarkDropdownMenuLink"
-              role="button" data-bs-toggle="dropdown" aria-expanded="false">Performances</a>
-            <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
-              <li><a class="dropdown-item text-light" href="BoilerRoom.html">BoilerRoom</a></li>
-              <li><a class="dropdown-item text-light" href="Coachella.html">Coachella</a></li>
-              <li><a class="dropdown-item text-light" href="Werchter.html">Werchter</a></li>
-            </ul>
-          </li>
-          <!-- Regular navigation link -->
-          <li class="nav-item"><a class="nav-link text-light fs-3" href="SignUp.html">SignUp</a></li>
-          <li class="nav-item"><a class="nav-link text-light fs-3" href="contact.html">Contact</a></li>
-        </ul>
-        <form class="form-inline mx-4 my-lg-0 ml-auto">
-          <input class="form-inline mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </section>
-      <!-- Search form outside of the collapsible area -->
-    </nav>
-
-
-  </section>
-  <main class="container pt-4 bgmain mt-5 ">
-    <h1 class="text-white text-center pb-2"> FRED AGAIN..</h1>
+    <main class="container pt-4 bgmain mt-5 ">
+      <!-- Fred Again.. Introduction Section -->
+      <h1 class="text-white text-center pb-2"> FRED AGAIN..</h1>
       <section class="row pt-4 align-items-center border-bottom">
-        <article class="col-lg-4 col-sm-12 text-light text-lg-end text-sm-center pb-4 ">
-          <h3>Frederick John Philip Gibson (born 19 July 1993), known professionally as Fred Again or simply Fred, is an
-            English record producer, singer, songwriter, multi-instrumentalist and DJ.</h3>
-          <p class="fs-5 mt-5 d-none d-xl-block">Fred's rise in popularity seems to have stemmed from the release of
-            'Merea (we've lost dancing)', a song sampling the artist The Blessed Madonna talking about the importance of
-            dancing and music during the pandemic. Not only speaking to the importance of music, the track includes
+        <!-- Text about Fred Again.. -->
+        <article
+          class="col-lg-4 col-sm-12 text-light text-lg-end text-sm-center pb-4 ">
+          <h3>Frederick John Philip Gibson (born 19 July 1993), known
+            professionally as Fred Again or simply Fred, is an
+            English record producer, singer, songwriter, multi-instrumentalist
+            and DJ.</h3>
+          <p class="fs-5 mt-5 d-none d-xl-block">Fred's rise in popularity seems
+            to have stemmed from the release of
+            'Merea (we've lost dancing)', a song sampling the artist The Blessed
+            Madonna talking about the importance of
+            dancing and music during the pandemic. Not only speaking to the
+            importance of music, the track includes
             messages of the vitality of friends.</p>
         </article>
+        <!-- Image of Fred Again.. -->
         <figure class="col-lg-8 col-sm-12 text-center figure">
-          <img src="img/fred1.jpg" class="mb-4 img-fluid h-100" alt="picture fred">
+          <img src="img/fred1.jpg" class="mb-4 img-fluid h-100"
+            alt="picture fred">
         </figure>
       </section>
 
-    <section class="ratio ratio-16x9 mt-4">
-      <iframe src="https://www.youtube.com/embed/zeD0g5xXo7E?si=Nrlykus2-stl4gle" title="YouTube video" style="max-width: 100%;height: 100%;" allowfullscreen></iframe>
+      <!-- Fred Again.. Video Section -->
+      <section class="ratio ratio-16x9 mt-4">
+        <iframe
+          src="https://www.youtube.com/embed/zeD0g5xXo7E?si=Nrlykus2-stl4gle"
+          title="YouTube video"
+          style="max-width: 100%;height: 100%;" allowfullscreen></iframe>
       </section>
-                
 
+      <!-- Awards & Nominations Section -->
+      <h1 class="text-center text-light m-4">AWARDS & NOMINATIONS</h1>
+      <section class="container m-4 pe-5 pb-4">
+        <!-- Awards & Nominations Table -->
+        <table class="table table-dark">
+          <tbody>
+            <!-- Table Headers -->
+            <tr>
+              <th>Year</th>
+              <th>Awards</th>
+              <th>Work</th>
+              <th>Category</th>
+              <th>Result</th>
+            </tr>
+            <tr>
+              <td>2016</td>
+              <td>Ivor Novello Awards</td>
+              <td>"Cargo"Roots Manuva</td>
+              <td>Best Contemporary Song</td>
+              <td>Nominated</td>
+            </tr>
+            <tr>
+              <td>2018</td>
+              <td>A&amp;R Awards</td>
+              <td>Fred Again</td>
+              <td>Songwriter Of The Year</td>
+              <td>Nominated</td>
+            </tr>
+            <tr>
+              <td>2019</td>
+              <td>Ivor Novello Awards</td>
+              <td>Shotgun</td>
+              <td>PRS For Music Most Performed Work</td>
+              <td>Nominated</td>
+            </tr>
+            <tr>
+              <td>2020</td>
+              <td>Brit Awards</td>
+              <td>Fred Again</td>
+              <td>Producer of the Year</td>
+              <td>Won</td>
+            </tr>
+            <tr>
+              <td>2021</td>
+              <td>Grammy Awards</td>
+              <td>"Both Of Us" </td>
+              <td>Best Dance Recording</td>
+              <td>Nominated</td>
+            </tr>
+            <tr>
+              <td rowspan="4">2022</td>
+              <td>Brit Awards</td>
+              <td rowspan="2">Fred Again</td>
+              <td>Best Dance Act</td>
+              <td>Nominated</td>
+            </tr>
+            <tr>
+              <td>DJ Mag Best of British Awards</td>
+              <td>Best Live Act</td>
+              <td>Won</td>
+            </tr>
+            <tr>
+              <td>Grammy Awards</td>
+              <td>"Bad Habits"(Ed Sheeran)</td>
+              <td>Song of the Year</td>
+              <td>Nominated</td>
+            </tr>
+            <tr>
+              <td>Libera Awards</td>
+              <td>"Stay High again.."</td>
+              <td>Best Dance Record</td>
+              <td>Nominated</td>
+            </tr>
+            <tr>
+              <td rowspan="6">2023</td>
+              <td rowspan="3">Brit Awards</td>
+              <td rowspan="2">Fred Again</td>
+              <td>Artist of the Year</td>
+              <td>Nominated</td>
+            </tr>
+            <tr>
+              <td>Dance Act</td>
+              <td>Nominated</td>
+            </tr>
+            <tr>
+              <td>Actual Life 3</td>
+              <td>Album of the Year</td>
+              <td>Nominated</td>
+            </tr>
+            <tr>
+              <td rowspan="3">A&amp;R Awards</td>
+              <td rowspan="2">Fred Again</td>
+              <td>Producer Of The Year</td>
+              <td>Pending</td>
+            </tr>
+            <tr>
+              <td>Songwriter Of The Year</td>
+              <td>Pending</td>
+            </tr>
+            <tr>
+              <td>"Adore U"</td>
+              <td>Song Of The Year</td>
+              <td>Pending</td>
+            </tr>
+            <tr>
+              <td rowspan="4">2024</td>
+              <td rowspan="4">Grammy Awards</td>
+              <td>Fred Again</td>
+              <td>Best New Artist</td>
+              <td>Pending</td>
+            </tr>
+            <tr>
+              <td>"Strong" <span>(with Romy)</span></td>
+              <td rowspan="2">Best Dance/Electronic Recording</td>
+              <td>Pending</td>
+            </tr>
+            <tr>
+              <td>"Rumble" <span>(with Skrillex featuring Flowdan)</span></td>
+              <td>Pending</td>
+            </tr>
+            <tr>
+              <td>Actual Life 3</td>
+              <td>Best Dance/Electronic Album</td>
+              <td>Pending</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
 
+    <!-- Footer Section -->
+    <footer
+      class="d-flex flex-wrap justify-content-between align-items-center my-4 border-top ">
+      <!-- Made By Section -->
+      <address href="contact.html" class="col-md-4 d-flex align-items-center">
+        <span class="ms-5 mb-md-0 text-light text-center fs-5">made by</span>
+        <a href="contact.html">
+          <img src="img/br-logo.png" alt="logo footer" width="50x">
+        </a>
+      </address>
+      <!-- Social Media Icons -->
+      <ul class="nav col-md-4 flex-row-reverse d-flex ">
+        <li class="me-5"><a class="text-light bi bi-twitter-x fs-2 "
+            href="https://twitter.com/fredagainagain1"
+            target="_blank"><svg class width="24" height="24">
+              <use xlink:href="#twitter"></use>
+            </svg></a></li>
+        <li class><a class="text-light bi bi-instagram fs-2"
+            href="https://www.instagram.com/fredagainagainagainagainagain/"
+            target="_blank"><svg class width="24"
+              height="24">
+              <use xlink:href="#instagram"></use>
+            </svg></a></li>
+        <li class><a class="text-light bi bi-facebook fs-2 "
+            href="https://www.facebook.com/fredagainagain"
+            target="_blank"><svg class width="24" height="24">
+              <use xlink:href="#facebook"></use>
+            </svg></a></li>
+      </ul>
+    </footer>
+  </body>
 
-
-
-    <h1 class="text-center text-light m-4">AWARDS & NOMINATIONS</h1>
-    <section class="container m-4 pe-5 pb-4">
-      <table class="table table-dark" >
-        <tbody>
-          <tr>
-            <th>Year</th>
-            <th>Awards</th>
-            <th>Work</th>
-            <th>Category</th>
-            <th>Result</th>
-          </tr>
-          <tr>
-            <td>2016</td>
-            <td>Ivor Novello Awards</td>
-            <td>"Cargo"Roots Manuva</td>
-            <td>Best Contemporary Song</td>
-            <td>Nominated</td>
-          </tr>
-          <tr>
-            <td>2018</td>
-            <td>A&amp;R Awards</td>
-            <td>Fred Again</td>
-            <td>Songwriter Of The Year</td>
-            <td>Nominated</td>
-          </tr>
-          <tr>
-            <td>2019</td>
-            <td>Ivor Novello Awards</td>
-            <td>Shotgun</td>
-            <td>PRS For Music Most Performed Work</td>
-            <td>Nominated</td>
-          </tr>
-          <tr>
-            <td>2020</td>
-            <td>Brit Awards</td>
-            <td>Fred Again</td>
-            <td>Producer of the Year</td>
-            <td>Won</td>
-          </tr>
-          <tr>
-            <td>2021</td>
-            <td>Grammy Awards</td>
-            <td>"Both Of Us" </td>
-            <td>Best Dance Recording</td>
-            <td>Nominated</td>
-          </tr>
-          <tr>
-            <td rowspan="4">2022</td>
-            <td>Brit Awards</td>
-            <td rowspan="2">Fred Again</td>
-            <td>Best Dance Act</td>
-            <td>Nominated</td>
-          </tr>
-          <tr>
-            <td>DJ Mag Best of British Awards</td>
-            <td>Best Live Act</td>
-            <td>Won</td>
-          </tr>
-          <tr>
-            <td>Grammy Awards</td>
-            <td>"Bad Habits"(Ed Sheeran)</td>
-            <td>Song of the Year</td>
-            <td>Nominated</td>
-          </tr>
-          <tr>
-            <td>Libera Awards</td>
-            <td>"Stay High again.."</td>
-            <td>Best Dance Record</td>
-            <td>Nominated</td>
-          </tr>
-          <tr>
-            <td rowspan="6">2023</td>
-            <td rowspan="3">Brit Awards</td>
-            <td rowspan="2">Fred Again</td>
-            <td>Artist of the Year</td>
-            <td>Nominated</td>
-          </tr>
-          <tr>
-            <td>Dance Act</td>
-            <td>Nominated</td>
-          </tr>
-          <tr>
-            <td>Actual Life 3</td>
-            <td>Album of the Year</td>
-            <td>Nominated</td>
-          </tr>
-          <tr>
-            <td rowspan="3">A&amp;R Awards</td>
-            <td rowspan="2">Fred Again</td>
-            <td>Producer Of The Year</td>
-            <td>Pending</td>
-          </tr>
-          <tr>
-            <td>Songwriter Of The Year</td>
-            <td>Pending</td>
-          </tr>
-          <tr>
-            <td>"Adore U"</td>
-            <td>Song Of The Year</td>
-            <td>Pending</td>
-          </tr>
-          <tr>
-            <td rowspan="4">2024</td>
-            <td rowspan="4">Grammy Awards</td>
-            <td>Fred Again</td>
-            <td>Best New Artist</td>
-            <td>Pending</td>
-          </tr>
-          <tr>
-            <td>"Strong" <span>(with Romy)</span></td>
-            <td rowspan="2">Best Dance/Electronic Recording</td>
-            <td>Pending</td>
-          </tr>
-          <tr>
-            <td>"Rumble" <span>(with Skrillex featuring Flowdan)</span></td>
-            <td>Pending</td>
-          </tr>
-          <tr>
-            <td>Actual Life 3</td>
-            <td>Best Dance/Electronic Album</td>
-            <td>Pending</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-  </main>
-  <footer class="d-flex flex-wrap justify-content-between align-items-center my-4 border-top ">
-    <address href="contact.html" class="col-md-4 d-flex align-items-center">
-      <span class="ms-5 mb-md-0 text-light text-center fs-5">made by</span>
-      <a href="contact.html">
-        <img src="img/br-logo.png" alt="logo footer" width="50x">
-      </a>
-    </address>
-    <ul class="nav col-md-4 flex-row-reverse d-flex ">
-      <li class="me-5"><a class="text-light bi bi-twitter-x fs-2 " href="https://twitter.com/fredagainagain1" target=”_blank”><svg class="" width="24" height="24">
-                  <use xlink:href="#twitter"></use>
-              </svg></a></li>
-      <li class=""><a class="text-light bi bi-instagram fs-2" href="https://www.instagram.com/fredagainagainagainagainagain/" target=”_blank”><svg class="" width="24" height="24">
-                  <use xlink:href="#instagram"></use>
-              </svg></a></li>
-      <li class=""><a class="text-light bi bi-facebook fs-2 " href="https://www.facebook.com/fredagainagain" target=”_blank”><svg class="" width="24" height="24">
-                  <use xlink:href="#facebook"></use>
-              </svg></a></li>
-  </ul>
-  </footer>
-</body>
 </html>

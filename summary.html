@@ -1,115 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <link class="" rel="icon" href="img\favicon.ico">
-  <title>summary</title>
-  <!-- Required meta tags -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-  <!-- JavaScript: Bootstrap Bundle with Popper -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <!-- own CSS -->
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/tracktop.js" defer></script>
-  <script src="js/nav.js" defer></script>
-  <script src="https://cdn.lordicon.com/lordicon.js"></script>
-</head>
+  <head>
+    <link class rel="icon" href="img\favicon.ico">
+    <title>summary</title>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <!-- JavaScript: Bootstrap Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+    <!-- own CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/tracktop.js" defer></script>
+    <script src="js/nav.js" defer></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  </head>
 
-<body>
-  <!-- The main container with a background image -->
-  <section id="picture" style="background-image: url('img/fred-banner-4.jpg');" class="border-bottom">
-    <!-- Navigation bar using Bootstrap classes -->
-    <nav class="navbar navbar-expand-lg navcolor fixed-top ">
-      <!-- Brand/logo on the left side -->
-      <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo nav"></a>
-      <!-- Collapsible wrapper for responsive design -->
-      <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon fs-1"></span>
-      </button>
-      <!-- Collapsible content for navigation links -->
-      <section class="collapse navbar-collapse justify-content-between" id="navbarTogglerDemo02">
-        <!-- Centered navigation links -->
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link text-light fs-3" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-light fs-3 active" href="summary.html">Summary</a>
-          </li>
-          <!-- Dropdown for "Who'sFred?" -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-light fs-3" href="whofred.html" id="navbarDarkDropdownMenuLink"
-              role="button" data-bs-toggle="dropdown" aria-expanded="false">Who'sFred?</a>
-            <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
-              <li>
-                <a class="dropdown-item text-light" href="whotony.html">Who'sTony?</a>
-              </li>
-            </ul>
-          </li>
-          <!-- Dropdown for "Performances" -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-light fs-3" href="Performances.html" id="navbarDarkDropdownMenuLink"
-              role="button" data-bs-toggle="dropdown" aria-expanded="false">Performances</a>
-            <ul class="dropdown-menu transparentbar" aria-labelledby="navbarDarkDropdownMenuLink">
-              <li><a class="dropdown-item text-light" href="BoilerRoom.html">BoilerRoom</a></li>
-              <li><a class="dropdown-item text-light" href="Coachella.html">Coachella</a></li>
-              <li><a class="dropdown-item text-light" href="Werchter.html">Werchter</a></li>
-            </ul>
-          </li>
-          <!-- Regular navigation link -->
-          <li class="nav-item"><a class="nav-link text-light fs-3" href="SignUp.html">SignUp</a></li>
-          <li class="nav-item"><a class="nav-link text-light fs-3" href="contact.html">Contact</a></li>
-        </ul>
-        <form class="form-inline mx-4 my-lg-0 ml-auto">
-          <input class="form-inline mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </section>
-      <!-- Search form outside of the collapsible area -->
-    </nav>
-  </section>
-  <main class="container pt-5  bgmain mt-5">
-    <section class="container border-bottom pb-5">
-      <a href="whofred.html" class="text-decoration-none text-white text-center pb-5">
-        <h1>WHO IS FRED AGAIN..</h1>
-      </a>
-      <article class="row pt-5 align-items-center">
-        <section class="col-lg-4 col-sm-12 text-light text-lg-end text-sm-center pb-4">
-          <h3>Frederick John Philip Gibson (born 19 July 1993), known professionally as Fred Again or simply Fred, is an
-            English record producer, singer, songwriter, multi-instrumentalist and DJ.</h3>
-          <!-- Hide on small screens, show on larger screens -->
-          <p class="fs-5 mt-5 d-none d-xl-block">Fred's rise in popularity seems to have stemmed from the release of
-            'Merea (we've lost dancing)', a song sampling the artist The Blessed Madonna talking about the importance of
-            dancing and music during the pandemic. Not only speaking to the importance of music, the track includes
-            messages of the vitality of friends.</p>
+  <body>
+    <!-- The main container with a background image -->
+    <section id="picture"
+      style="background-image: url('img/fred-banner-4.jpg');"
+      class="border-bottom">
+      <!-- Navigation bar using Bootstrap classes -->
+      <nav class="navbar navbar-expand-lg navcolor fixed-top ">
+        <!-- Brand/logo on the left side -->
+        <a class="navbar-brand" href="index.html"><img src="img/logo.png"
+            alt="logo nav"></a>
+        <!-- Collapsible wrapper for responsive design -->
+        <button class="navbar-toggler navbar-dark" type="button"
+          data-toggle="collapse" data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon fs-1"></span>
+        </button>
+        <!-- Collapsible content for navigation links -->
+        <section class="collapse navbar-collapse justify-content-between"
+          id="navbarTogglerDemo02">
+          <!-- Centered navigation links -->
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link text-light fs-3" aria-current="page"
+                href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light fs-3 active"
+                href="summary.html">Summary</a>
+            </li>
+            <!-- Dropdown for "Who'sFred?" -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light fs-3"
+                href="whofred.html" id="navbarDarkDropdownMenuLink"
+                role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Who'sFred?</a>
+              <ul class="dropdown-menu transparentbar"
+                aria-labelledby="navbarDarkDropdownMenuLink">
+                <li>
+                  <a class="dropdown-item text-light"
+                    href="whotony.html">Who'sTony?</a>
+                </li>
+              </ul>
+            </li>
+            <!-- Dropdown for "Performances" -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light fs-3"
+                href="Performances.html" id="navbarDarkDropdownMenuLink"
+                role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Performances</a>
+              <ul class="dropdown-menu transparentbar"
+                aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item text-light"
+                    href="BoilerRoom.html">BoilerRoom</a></li>
+                <li><a class="dropdown-item text-light"
+                    href="Coachella.html">Coachella</a></li>
+                <li><a class="dropdown-item text-light"
+                    href="Werchter.html">Werchter</a></li>
+              </ul>
+            </li>
+            <!-- Regular navigation link -->
+            <li class="nav-item"><a class="nav-link text-light fs-3"
+                href="SignUp.html">SignUp</a></li>
+            <li class="nav-item"><a class="nav-link text-light fs-3"
+                href="contact.html">Contact</a></li>
+          </ul>
+          <form class="form-inline mx-4 my-lg-0 ml-auto">
+            <input class="form-inline mr-sm-2" type="search"
+              placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0"
+              type="submit">Search</button>
+          </form>
         </section>
-        <a href="whofred.html" class="col-lg-8 col-sm-12 text-center figure">
-          <img src="img\fred-summary2.webp" alt="picture fred" height="auto" width="100%">
-        </a>
-      </article>
+        <!-- Search form outside of the collapsible area -->
+      </nav>
     </section>
-    <a href="https://open.spotify.com/artist/4oLeXFyACqeem2VImYeBFe" class="text-decoration-none" target="_blank">
-      <h1 class="text-white text-center mb-4 mt-2"> Fred Again.. on Spotify</h1>
-    </a>
-    <section class="container mt-3 " id="spotbanner" style="background-image: url('img/bannerspotify3.jpg');">
-      <a href="https://open.spotify.com/artist/4oLeXFyACqeem2VImYeBFe" target="_blank"
-        class="row justify-content-center  text-decoration-none">
-        <img id="spotlogo" class="col-lg-4 mx-5 " src="img\spotify.png"></img>
+    <!-- Main container with top padding, background color, and top margin -->
+    <main class="container pt-5  bgmain mt-5">
+      <!-- Container section with a bottom border -->
+      <section class="container border-bottom pb-5">
+        <!-- Anchor link to another page with styling for a heading -->
+        <a href="whofred.html"
+          class="text-decoration-none text-white text-center pb-5">
+          <h1>WHO IS FRED AGAIN..</h1>
+        </a>
+        <!-- Article row with padding, align-items, and an embedded image link -->
+        <article class="row pt-5 align-items-center">
+          <!-- Column for text with specified alignment and font size -->
+          <section
+            class="col-lg-4 col-sm-12 text-light text-lg-end text-sm-center pb-4">
+            <h3>Frederick John Philip Gibson (born 19 July 1993), known
+              professionally as Fred Again or simply Fred, is an
+              English record producer, singer, songwriter, multi-instrumentalist
+              and DJ.</h3>
+            <!-- Hide on small screens, show on larger screens -->
+            <p class="fs-5 mt-5 d-none d-xl-block">Fred's rise in popularity
+              seems to have stemmed from the release of
+              'Merea (we've lost dancing)', a song sampling the artist The
+              Blessed Madonna talking about the importance of
+              dancing and music during the pandemic. Not only speaking to the
+              importance of music, the track includes
+              messages of the vitality of friends.</p>
+          </section>
+          <!-- Anchor link to another page with an embedded image -->
+          <a href="whofred.html" class="col-lg-8 col-sm-12 text-center figure">
+            <img src="img\fred-summary2.webp" alt="picture fred" height="auto"
+              width="100%">
+          </a>
+        </article>
+      </section>
+      <!-- Anchor link to Spotify with styling for a heading -->
+      <a href="https://open.spotify.com/artist/4oLeXFyACqeem2VImYeBFe"
+        class="text-decoration-none" target="_blank">
+        <h1 class="text-white text-center mb-4 mt-2"> Fred Again.. on
+          Spotify</h1>
+      </a>
+      <!-- Container section with a background image and styling -->
+      <section class="container mt-3 " id="spotbanner"
+        style="background-image: url('img/bannerspotify3.jpg');">
+        <a href="https://open.spotify.com/artist/4oLeXFyACqeem2VImYeBFe"
+          target="_blank"
+          class="row justify-content-center  text-decoration-none">
+          <!-- Image logo and a column with a table for most played tracks on Spotify -->
+          <img id="spotlogo" class="col-lg-4 mx-5 " src="img\spotify.png"></img>
         <section class=" col-lg-8 col-sm-12 d-flex align-items-center mt-3">
           <table class="table table-dark text-center ">
             <thead>
@@ -119,6 +168,7 @@
               </tr>
             </thead>
             <tbody>
+              <!-- Table rows with track information -->
               <tr>
                 <th scope="row">1</th>
                 <td id="trackinfo"></td>
@@ -144,117 +194,172 @@
         </section>
       </a>
     </section>
+    <!-- Container section with top padding, a border-top, and bottom margin -->
     <section class="container pt-4 border-top mt-4 border-bottom mb-4">
+      <!-- Row with image and text columns for Tony Friend information -->
       <section class="row align-items-center">
         <figure class="col-lg-8 col-sm-12">
-          <a href="whotony.html"><img src="img\tony3.jpg" alt="picture tony" height="auto" width="100%"></a>
+          <a href="whotony.html"><img src="img\tony3.jpg" alt="picture tony"
+              height="auto" width="100%"></a>
         </figure>
-        <article class="col-lg-4 col-md-12 fs-4 text-light text-lg-start text-sm-center ">
+        <article
+          class="col-lg-4 col-md-12 fs-4 text-light text-lg-start text-sm-center ">
           <p>
             <a class="text-decoration-none text-light " href="whotony.html">
               <h1>Who's Tony Friend?</h1>
             </a>
-          <p>Ever gone to a Fred Again.. show and wondered who the other energetic DJ on stage is? That would be the
-            legend Tony Friend. He joined Fred Again.. on his fall UK tour in 2021 as an onstage DJ, and has been
-            performing with Fred ever since. </p>
-        </article>
+            <p>Ever gone to a Fred Again.. show and wondered who the other
+              energetic DJ on stage is? That would be the
+              legend Tony Friend. He joined Fred Again.. on his fall UK tour in
+              2021 as an onstage DJ, and has been
+              performing with Fred ever since. </p>
+          </article>
+        </section>
       </section>
-    </section>
-    <a href="Performances.html" class="text-decoration-none">
-      <h1 class="text-center mb-4 text-light">Experience Fred Again..</h1>
-    </a>
-
-
-    <section id="carouselExampleIndicators" class="carousel slide border-bottom" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner container-xl">
-        <figure class="carousel-item active">
-          <a href="BoilerRoom.html"><img class=" d-block w-100" src="img/carousel/boilerroom-banner.png"
-              alt="boiler room slide"></a>
-        </figure>
-        <figure class="carousel-item">
-          <a href="Coachella.html"><img class="d-block w-100" src="img/carousel/coachella-banner.png"
-              alt="Coachella slide"></a>
-        </figure>
-        <figure class="carousel-item">
-          <a href="Werchter.html"><img class="d-block w-100" src="img/carousel/werchter-banner.png"
-              alt="werchter slide"></a>
-        </figure>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <!-- Anchor link to another page with styling for a heading -->
+      <a href="Performances.html" class="text-decoration-none">
+        <h1 class="text-center mb-4 text-light">Experience Fred Again..</h1>
       </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </a>
-    </section>
 
-
-
-    <section class="container pt-3">
-      <article class="row">
-        <a class="text-decoration-none text-light text-center" href="SignUp.html">
-          <h1>Newsletter</h1>
+      <!-- Carousel section with indicators, image slides, and controls -->
+      <section id="carouselExampleIndicators"
+        class="carousel slide border-bottom" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner container-xl">
+          <!-- Carousel items with active class for the first item -->
+          <figure class="carousel-item active">
+            <a href="BoilerRoom.html"><img class=" d-block w-100"
+                src="img/carousel/boilerroom-banner.png"
+                alt="boiler room slide"></a>
+          </figure>
+          <figure class="carousel-item">
+            <a href="Coachella.html"><img class="d-block w-100"
+                src="img/carousel/coachella-banner.png"
+                alt="Coachella slide"></a>
+          </figure>
+          <figure class="carousel-item">
+            <a href="Werchter.html"><img class="d-block w-100"
+                src="img/carousel/werchter-banner.png"
+                alt="werchter slide"></a>
+          </figure>
+        </div>
+        <!-- Carousel controls for navigation -->
+        <a class="carousel-control-prev" href="#carouselExampleIndicators"
+          role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         </a>
-        <article class="col-lg-9 col-md-12 fs-4 text-light">
-          <p>
-          <p class="text-lg-end text-md-center fs-5">Unlock an exclusive backstage experience with "Fred Again.."!
-            Signup
-            for our newsletter to receive firsthand updates on this groundbreaking music artist. Be the first to access
-            unreleased tracks, behind-the-scenes stories, and exclusive event invitations. Join a community of music
-            enthusiasts and dive into the unique world of "Fred Again..".Subscribe now for an insider's perspective on
-            the
-            latest happenings and creative insights. Elevate your connection with "Fred Again.." and stay in the loop
-            with our newsletter!
-          </p>
-        </article>
-        <address class="col-lg-3 col-md-12 my-auto text-center">
-          <a href="SignUp.html" class="d-block"><lord-icon src="https://cdn.lordicon.com/aycieyht.json" trigger="loop"
-              delay="500" state="in-unfold" colors="primary:#ffffff,secondary:#08a88a"
-              style="width:200px;height:200px;margin: 0 auto;">
-            </lord-icon></a>
-        </address>
-      </article>
-    </section>
-    <article class="container border-top">
-      <a class="text-decoration-none text-light text-center" href="contact.html">
-        <h1 class="mt-3">Contact</h1>
-      </a>
-      <section class="row">
-        <a class="col-md-2 my-auto text-center" href="contact.html"><img class="img-fluid" src="img/br-logo.png"
-            width="150" height="150"></a>
-        <article class="col-md-10 fs-4 text-light my-auto">
-          <p class="text-lg-start text-md-center fs-5">Ready to enhance your online presence? BR-Graphics specializes in
-            creating stunning, user-friendly websites for startups and established businesses alike. Contact us to
-            discuss your ideas and let's build a website that exceeds your expectations. Elevate your online success
-            with BR-Graphics!
-          </p>
-        </article>
+        <a class="carousel-control-next" href="#carouselExampleIndicators"
+          role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
       </section>
-    </article>
-  </main>
-  <footer class="d-flex flex-wrap justify-content-between align-items-center  my-4 border-top ">
-    <address href="contact.html" class="col-md-4 d-flex align-items-center">
-      <span class="ms-5 mb-md-0 text-light text-center fs-5">made by</span>
-      <a href="contact.html">
-        <img src="img/br-logo.png" alt="logo footer" width="50x">
-      </a>
-    </address>
-    <ul class="nav col-md-4 flex-row-reverse d-flex ">
-      <li class="me-5"><a class="text-light bi bi-twitter-x fs-2 " href="https://twitter.com/fredagainagain1" target=”_blank”><svg class="" width="24" height="24">
-                  <use xlink:href="#twitter"></use>
-              </svg></a></li>
-      <li class=""><a class="text-light bi bi-instagram fs-2" href="https://www.instagram.com/fredagainagainagainagainagain/" target=”_blank”><svg class="" width="24" height="24">
-                  <use xlink:href="#instagram"></use>
-              </svg></a></li>
-      <li class=""><a class="text-light bi bi-facebook fs-2 " href="https://www.facebook.com/fredagainagain" target=”_blank”><svg class="" width="24" height="24">
-                  <use xlink:href="#facebook"></use>
-              </svg></a></li>
-  </ul>
-  </footer>
-</body>
-</html>
+
+      <!-- Container section with top padding -->
+      <section class="container pt-3">
+        <!-- Article row with anchor link for a heading -->
+        <article class="row">
+          <a class="text-decoration-none text-light text-center"
+            href="SignUp.html">
+            <h1>Newsletter</h1>
+          </a>
+          <!-- Text column with specified alignment and font size -->
+          <article class="col-lg-9 col-md-12 fs-4 text-light">
+            <p>
+              <p class="text-lg-end text-md-center fs-5">Unlock an exclusive
+                backstage experience with "Fred Again.."!
+                Signup
+                for our newsletter to receive firsthand updates on this
+                groundbreaking music artist. Be the first to access
+                unreleased tracks, behind-the-scenes stories, and exclusive
+                event invitations. Join a community of music
+                enthusiasts and dive into the unique world of
+                "Fred Again..".Subscribe now for an insider's perspective on
+                the
+                latest happenings and creative insights. Elevate your connection
+                with "Fred Again.." and stay in the loop
+                with our newsletter!
+              </p>
+            </article>
+            <!-- Address column with anchor link and an animated icon -->
+            <address class="col-lg-3 col-md-12 my-auto text-center">
+              <a href="SignUp.html" class="d-block"><lord-icon
+                  src="https://cdn.lordicon.com/aycieyht.json" trigger="loop"
+                  delay="500" state="in-unfold"
+                  colors="primary:#ffffff,secondary:#08a88a"
+                  style="width:200px;height:200px;margin: 0 auto;">
+                </lord-icon></a>
+            </address>
+          </article>
+        </section>
+        <!-- Article section with a top border -->
+        <article class="container border-top">
+          <!-- Anchor link for a heading -->
+          <a class="text-decoration-none text-light text-center"
+            href="contact.html">
+            <h1 class="mt-3">Contact</h1>
+          </a>
+          <!-- Row with image and text columns for contact information -->
+          <section class="row">
+            <a class="col-md-2 my-auto text-center" href="contact.html"><img
+                class="img-fluid" src="img/br-logo.png"
+                width="150" height="150"></a>
+            <article class="col-md-10 fs-4 text-light my-auto">
+              <p class="text-lg-start text-md-center fs-5">Ready to enhance your
+                online presence? BR-Graphics specializes in
+                creating stunning, user-friendly websites for startups and
+                established businesses alike. Contact us to
+                discuss your ideas and let's build a website that exceeds your
+                expectations. Elevate your online success
+                with BR-Graphics!
+              </p>
+            </article>
+          </section>
+        </article>
+      </main>
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center  my-4 border-top ">
+        <!-- Logo and attribution section -->
+        <address href="contact.html" class="col-md-4 d-flex align-items-center">
+          <span class="ms-5 mb-md-0 text-light text-center fs-5">made by</span>
+          <a href="contact.html">
+            <img src="img/br-logo.png" alt="banner logo" width="50x">
+          </a>
+        </address>
+        <!-- Social media links -->
+        <ul class="nav col-md-4 flex-row-reverse d-flex ">
+          <!-- Twitter icon and link -->
+          <li class="me-5">
+            <a class="text-light bi bi-twitter-x fs-2 "
+              href="https://twitter.com/fredagainagain1" target="_blank">
+              <svg class width="24" height="24">
+                <use xlink:href="#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <!-- Instagram icon and link -->
+          <li class>
+            <a class="text-light bi bi-instagram fs-2"
+              href="https://www.instagram.com/fredagainagainagainagainagain/"
+              target="_blank">
+              <svg class width="24" height="24">
+                <use xlink:href="#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <!-- Facebook icon and link -->
+          <li class>
+            <a class="text-light bi bi-facebook fs-2 "
+              href="https://www.facebook.com/fredagainagain" target="_blank">
+              <svg class width="24" height="24">
+                <use xlink:href="#facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </body>
+  </html>
