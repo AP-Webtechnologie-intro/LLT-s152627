@@ -70,8 +70,8 @@ body {
   margin-top: 0;
 }
 
-/* Styles for screens larger than a certain width (adjust the width as needed) */
-@media screen and (min-width: 768px) {
+/* Styles for screens larger than a certain width (hover function off on small screens) */
+@media screen and (min-width: 1000px) {
   .dropdown:hover .dropdown-menu {
     display: block;
     margin-top: 0;
